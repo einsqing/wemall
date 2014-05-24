@@ -1,0 +1,20 @@
+[ 2014-05-01T16:18:32+08:00 ] 127.0.0.1 /wemall/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000065s ]
+INFO: [ app_init ] --END-- [ RunTime:0.010470s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.021157s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.021553s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000216s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000470s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.051073s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.051346s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.010639s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.010871s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.015698s ]
+INFO: [ app_end ] --END-- [ RunTime:0.015935s ]
+

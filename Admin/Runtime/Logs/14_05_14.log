@@ -1,0 +1,6 @@
+[ 2014-05-14T13:21:34+08:00 ] 127.0.0.1 /WeMall/admin.php/Home/Weixin/autoreplay
+ERR: 非法操作:autoreplay
+
+[ 2014-05-14T13:21:38+08:00 ] 127.0.0.1 /WeMall/admin.php/Home/Weixin/diynav
+ERR: 非法操作:diynav
+

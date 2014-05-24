@@ -1,0 +1,70 @@
+<include file="Public/header" />
+<div class="navbar-collapse collapse">
+	<ul class="nav navbar-nav">
+		<li id="dingdan"><a href="__MODULE__/Admin/index">订单</a></li>
+		<li class="dropdown active" id="shangpin"><a
+			href="javascript:void(0)" class="dropdown-toggle "
+			data-toggle="dropdown"> 商品 <b class="caret"></b></a>
+			<ul class="dropdown-menu">
+				<li><a href="__MODULE__/Admin/productcate">商品分类</a></li>
+				<li><a href="__MODULE__/Admin/product">商品管理</a></li>
+			</ul></li>
+		<li class="dropdown" id="weixinset"><a href="javascript:void(0)"
+			class="dropdown-toggle" data-toggle="dropdown"> 微信设置 <b
+				class="caret"></b>
+		</a>
+			<ul class="dropdown-menu">
+				<li><a href="__MODULE__/Weixin/index" id="weixinset">微信初始化</a>
+				</li>
+				<li><a href="__MODULE__/Weixin/autoreplay" id="weixinset">自动回复</a>
+				</li>
+				<li><a href="__MODULE__/Weixin/diynav" id="weixinset">自定义菜单</a>
+				</li>
+			</ul></li>
+	</ul>
+	<ul class="nav navbar-nav navbar-right">
+		<li><a href="javascript:void(0)">{{$username}}</a></li>
+		<li><a href="__MODULE__/Admin/quit">退出</a></li>
+	</ul>
+</div>
+<!--/.nav-collapse -->
+</div>
+</div>
+
+<div class="container" style="padding-top: 20px">
+	<a href="__MODULE__/Admin/addproduct" class="btn btn-primary"
+		role="button">添加商品</a>
+	<div style="height: 10px"></div>
+	<table class="table  table-bordered table-hover">
+		<thead>
+			<tr>
+				<th class="text-center">商品序号</th>
+				<th class="text-center">分类序号</th>
+				<th class="text-center">商品名称</th>
+				<th class="text-center">商品价格</th>
+				<th class="text-center">商品原价</th>
+				<th class="text-center">商品图片</th>
+				<th class="text-center">操作</th>
+			</tr>
+		</thead>
+		<tbody>
+			<volist name="product" id="data">
+			<tr>
+				<td class="text-center">{{$data.id}}</td>
+				<td class="text-center">{{$data.cate_id}}</td>
+				<td class="text-center">{{$data.title}}</td>
+				<td class="text-center">{{$data.price}}元</td>
+				<td class="text-center">{{$data.old_price}}元</td>
+				<td class="text-center">{{$data.img}}</td>
+				<td class="text-center"><a
+					href="__CONTROLLER__/reproduct/id/{{$data.id}}">修改</a>|<a
+					href="__CONTROLLER__/delproduct/id/{{$data.id}}">删除</a></td>
+			</tr>
+			</volist>
+		</tbody>
+	</table>
+	<div class="text-right">{{$page}}</div>
+</div>
+<!-- /container -->
+
+<include file="Public/footer" />
