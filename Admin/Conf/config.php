@@ -2,11 +2,9 @@
 $arr1 =  array(
 	//'配置项'=>'配置值'
 	'DB_TYPE'   => 'mysql', // 数据库类型
-	'DB_PORT'   => '3306', // 端口
+
 	'DB_CHARSET'=> 'utf8',// 数据库编码默认采用utf8
-	'URL_ROUTER_ON'   => true,
-	'SHOW_PAGE_TRACE' => true,
-	
+
 );
 // include $_SERVER['DOCUMENT_ROOT'].'/WeMall/Public/Conf/config.php';
 include './Public/Conf/config.php';
