@@ -1,0 +1,6 @@
+[ 2014-06-03T11:55:50+08:00 ] 127.0.0.1 /WeMall/index.php/Index/admin
+ERR: php_network_getaddresses: getaddrinfo failed: 不知道这样的主机。 
+
+[ 2014-06-03T13:36:48+08:00 ] 127.0.0.1 /WeMall/index.php/Index/admin
+ERR: php_network_getaddresses: getaddrinfo failed: 不知道这样的主机。 
+
