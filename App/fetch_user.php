@@ -1,7 +1,6 @@
 ﻿<?php
 	include 'config.php';
 
-	$_POST['uid'] = 1;
 	$sql = "SELECT * FROM ".DB_PREFIX."orders where uid='$_POST[uid]'ORDER BY id DESC";	
 	$query = mysql_query($sql) or die('error');
 
