@@ -2,7 +2,7 @@
 /**
   * wechat php test
   */
-include './Public/Conf/App/config.php';
+include './Public/Conf/config.php';
 $sql = "select * from ".DB_PREFIX."weixin where id = '1'";
 $weixin = mysql_fetch_assoc(mysql_query($sql));
 // print_r($weixin);
