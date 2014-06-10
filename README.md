@@ -33,4 +33,4 @@ wemall微信商城地址是http://wemall.duapp.com。
 	2.微信绑定地址例为http://+你的域名+/weixin.php TOKEN:wemall
 
 
-如需更多信息请访问http://wemall.duapp.com或者联系QQ：786699892
+如需更多信息请访问http://wemall.duapp.com或者加入QQ群：115303179
