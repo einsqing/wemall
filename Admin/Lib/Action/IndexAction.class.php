@@ -14,48 +14,52 @@ class IndexAction extends Action {
 			if($_SESSION['verify'] == md5($_POST['verify'])) {
 
 				$username = $_POST['username'];
-		    	$pwd = $_POST['password'];
-		    	 
-		    	$m = M('admin');
-		    	$arr = $m->where("username='$username' AND password='$pwd'")->select();
-		    	
-		    	if ($arr) {
-		    		$_SESSION['username']=$username;
-		    		$_SESSION['id']=$arr['id'];
-		    	}else{
-	    			$this->error('登录失败，请重新登录');
-	    		}
-	    		
-	    	}else{
+				$pwd = $_POST['password'];
+				
+				$m = M('admin');
+				$arr = $m->where("username='$username' AND password='$pwd'")->select();
+				
+				if ($arr) {
+					$_SESSION['username']=$username;
+					$_SESSION['id']=$arr['id'];
+				}else{
+					$this->error('登录失败，请重新登录');
+				}
+				
+			}else{
 				$this->error('验证码错误！');
 			}
 		}
 
+		$this->success('登录成功','orderlist');
 
+	}
+	public function orderlist(){
 		if (isset( $_SESSION['username'] )) {
 
 			import('ORG.Util.Page');// 导入分页类
 			$orders = M('orders');
 
 			$count      = $orders->count();// 查询满足要求的总记录数
-			$Page       = new Page($count,25);// 实例化分页类 传入总记录数和每页显示的记录数
+			$Page       = new Page($count,12);// 实例化分页类 传入总记录数和每页显示的记录数
 			$show       = $Page->show();// 分页显示输出
 
 			$orders = $orders->order('id desc')->limit($Page->firstRow.','.$Page->listRows)->select();
-			// $orders = $orders->order('id desc')->select();
+			$usersM = M('users');
+			$orderdetailM = M('orders_detail');
 
-			for ($i=0; $i < count($orders); $i++) { 
-				$uid = $orders[$i][uid];
-				$users = M('users')->where('uid='.$uid)->select();
+			for ($i=0; $i < count($orders); $i++) {
+
+				$condition['uid'] = $orders[$i]['uid'];
+				$users = $usersM->where($condition)->select();
 				// dump($users);
 				if ($users) {//如果用户存在时
 					$orders[$i] = array_merge($orders[$i] , $users);
-					// array_push(array, var)
 				}
 
-				$orderid = $orders[$i][orderid];
-				$orderdetail = M('orders_detail')->where('orderid='.$orderid)->select();
-				// dump($orderdetail);
+				$condition2['orderid'] = $orders[$i]['orderid'];
+				$orderdetail = $orderdetailM->where($condition2)->select();
+
 				if ($orderdetail) {
 					$orders[$i] = array_merge($orders[$i] , $orderdetail);
 				}
@@ -63,13 +67,13 @@ class IndexAction extends Action {
 
 			}
 			
-			// dump($orders);
 			$this->assign('page',$show);// 赋值分页输出
 			$this->assign('username',$_SESSION['username']);
 			$this->assign('orders',$orders);
 			$this->display('Admin/index');
 		}
 	}
+
 	public function quit(){
 		unset($_SESSION['username']);
 		$this->success('已注销登录！','index');
