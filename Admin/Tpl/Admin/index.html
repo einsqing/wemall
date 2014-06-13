@@ -1,0 +1,84 @@
+﻿<include file="Public/header" />
+<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+					<li class="active" id="dingdan">
+						<a href="__ACTION__">订单</a>
+					</li>
+					<li class="dropdown" id="shangpin">
+						<a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">
+							商品
+							<b class="caret"></b>
+						</a>
+						<ul class="dropdown-menu">
+							<li>
+								<a href="__APP__/Admin/nav">商品分类</a>
+							</li>
+							<li>
+								<a href="__APP__/Admin/product">商品管理</a>
+							</li>
+						</ul>
+					</li>
+					<li class="dropdown" id="weixinset">
+						<a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">
+							微信设置
+							<b class="caret"></b>
+						</a>
+						<ul class="dropdown-menu">
+							<li>
+								<a href="__APP__/Weixin/index" id="weixinset">微信初始化</a>
+							</li>
+							
+						</ul>
+					</li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li>
+						<a href="javascript:void(0)">{$username}</a>
+					</li>
+					<li>
+						<a href="__URL__/quit">退出</a>
+					</li>
+				</ul>
+			</div>
+			<!--/.nav-collapse -->
+		</div>
+	</div>
+    <div class="container">
+      <table class="table  table-bordered table-hover">
+		  <thead>
+		    <tr>
+		      <th class="text-center">订单编号</th>
+		      <th class="text-center">订单用户</th>
+		      <th class="text-center">联系方式</th>
+		      <th class="text-center">订单商品</th>
+		      <th class="text-center">订单总价</th>
+		      <th class="text-center">订单地址</th>
+		      <th class="text-center">订单状态</th>
+		      <th class="text-center">付款状态</th>
+		      <th class="text-center">订单时间</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		  <volist name="orders" id="vo">
+			  <tr>
+			    <td class="text-center">{$vo.orderid}</td>
+			    <td class="text-center">{$vo.0.username}</td>
+			    <td class="text-center">{$vo.0.phone}</td>
+			    <td class="text-center">
+			    	<for start="1" end="$vo.length">
+			    	{$vo.$i.title}-{$vo.$i.price}-{$vo.$i.quantity}|
+			    	</for>
+			    </td>
+				<td class="text-center">{$vo.totalprice}元</td>
+				<td class="text-center">{$vo.0.address}</td>
+				<td class="text-center">{$vo.status}</td>
+				<td class="text-center">{$vo.pay_status}</td>
+				<td class="text-center">{$vo.time}</td>
+			  </tr>
+		  </volist>
+		  </tbody>
+	  </table>
+	  <div class="text-right">{$page}</div>
+    </div> <!-- /container -->
+    
+<include file="Public/footer" />
