@@ -14,7 +14,7 @@ $orderid = date ( "YmdHis" ) . mt_rand ( 10, 99 );
 $time = date ( "Y/m/d H:i:s" );
 
 $pay = '1';
-$cartdataArray = json_decode($cartdata , true);
+$cartdataArray = json_decode(stripslashes($cartdata) , true);
 
 switch ($pay) {
 	case '1': //货到付款
