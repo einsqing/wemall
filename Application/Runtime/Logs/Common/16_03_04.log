@@ -1,0 +1,24 @@
+[ 2016-03-04T15:39:48+08:00 ] ::1 /kaiyuanshengji/index.php?m=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000084s ]
+ERR: 无法加载模块:1
+
+[ 2016-03-04T15:40:31+08:00 ] ::1 /kaiyuanshengji/index.php?g=App&m=Index&a=index&uid=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000133s ]
+ERR: 无法加载模块:Index
+
+[ 2016-03-04T15:40:50+08:00 ] ::1 /kaiyuanshengji/index.php?g=App&m=Index&a=index&uid=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000085s ]
+ERR: 无法加载模块:Index
+
+[ 2016-03-04T15:41:05+08:00 ] ::1 /kaiyuanshengji/index.php?g=App&m=Index&a=index&uid=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000083s ]
+ERR: 无法加载模块:Index
+

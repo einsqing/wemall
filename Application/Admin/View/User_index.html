@@ -1,0 +1,74 @@
+<include file="Public:header"/>
+<div class="col-sm-12 widget-container-span">
+	<div class="widget-box transparent">
+		<div class="widget-body">
+			<div class="widget-main padding-12 no-padding-left no-padding-right">
+				<div class="tab-content padding-4">
+					<div id="home1" class="tab-pane in active">
+						<div class="row">
+							<div class="col-xs-12 no-padding-right">
+								<div class="table-responsive">
+									<table id="sample-table-1"
+										class="table table-striped table-bordered table-hover">
+										<thead>
+											<tr>
+												<!-- <th class="center"><label> <input
+														type="checkbox" class="ace"> <span class="lbl"></span>
+												</label></th> -->
+												<th>ID</th>
+												<th>用户名</th>
+												<th>联系方式</th>
+												<th>送货地址</th>
+												<th>加入时间</th>
+											</tr>
+										</thead>
+
+										<tbody>
+										<volist name="result" id="result">
+											<tr>
+												<!-- <td class="center"><label> <input
+														type="checkbox" class="ace"> <span class="lbl"></span>
+												</label></td> -->
+												
+												<td>{$result.id}</td>
+												<td>{$result.username}</td>
+												<td>{$result.phone}</td>
+												<td>{$result.address}</td>
+												<td>{$result.time}</td>
+											</tr>
+										</volist>
+										</tbody>
+									</table>
+									<div class="pagination" style="margin:0px;">
+									    {$page}
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		
+		<script type="text/javascript">
+			function addSubmenu(o) {
+				var subid = $(o).parent().prev().prev().html();
+				$('select[name="parent"]').val(subid);
+				$('input[name="addmenu"]').val('0');
+				$('input[name="name"]').val('');
+				
+				$('#myTab li').eq(1).find('a').click();
+			}
+			function reSubmenu(o){
+				var name = $(o).parent().prev().html().replace(/&nbsp;/g,'').replace('├─','');
+				var pid = $(o).parent().prev().prev().attr('parent');
+				var subid = $(o).parent().prev().prev().html();
+				$('select[name="parent"]').val(pid);
+				$('input[name="name"]').val(name);
+				$('input[name="addmenu"]').val(subid);
+				$('#myTab li').eq(1).find('a').click();
+			}
+		</script>
+	</div>
+</div>

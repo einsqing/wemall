@@ -1,0 +1,27 @@
+<include file="Public:header" />
+<include file="Public:navbar" />
+<div class="main-container" id="main-container">
+	<div class="main-container-inner">
+		<include file="Public:left" />
+        <script type="text/javascript" language="javascript"> 
+   		function iframeResize(iframe) {
+	        iframe.height = $(window).height()-90;
+	    }
+		</script>
+		<div class="main-content">
+			<div class="breadcrumbs" id="breadcrumbs">
+				<ul class="breadcrumb">
+					<li><i class="icon-home home-icon"></i> <a href="javascript:void(0);">商城设置</a></li>
+					<li class="active">商城设置</li>
+				</ul>
+			</div>
+			<div id="content_main">
+				<iframe src="{:U('Admin/Index/set')}" id="main_iframe" name="main_iframe"
+					style="width: 100%;" frameborder="0" onload="iframeResize(this);"  scrolling="yes"></iframe>
+
+			</div>
+		</div>
+
+	</div>
+</div>
+<include file="Public:footer" />

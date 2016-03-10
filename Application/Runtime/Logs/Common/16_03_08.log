@@ -1,0 +1,24 @@
+[ 2016-03-08T17:46:05+08:00 ] 125.47.64.223 /wemall/index.php?g=App&m=Index&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004722s ]
+ERR: 无法加载模块:Index
+
+[ 2016-03-08T17:46:06+08:00 ] 112.64.235.248 /wemall/index.php?g=App&m=Index&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000642s ]
+ERR: 无法加载模块:Index
+
+[ 2016-03-08T17:53:53+08:00 ] 125.47.64.223 /wemall/index.php?g=App&m=Index&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000864s ]
+ERR: 无法加载模块:Index
+
+[ 2016-03-08T17:53:56+08:00 ] 125.47.64.223 /wemall/index.php?g=App&m=Index&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001104s ]
+ERR: 无法加载模块:Index
+

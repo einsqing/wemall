@@ -1,0 +1,1776 @@
+[ 2016-03-09T08:56:29+08:00 ] 61.163.138.45 /wemall/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.011277s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005318s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005416s ]
+NOTIC: [8] Undefined index: wadmin /www/users/HA116102/WEB/wemall/Application/Admin/Controller/PublicController.class.php 第 8 行.
+
+[ 2016-03-09T08:56:29+08:00 ] 61.163.138.45 /wemall/index.php?m=Admin&c=Login&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000386s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000427s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000489s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.006925s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.007008s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.041216s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.041261s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000583s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000629s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000897s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000946s ]
+
+[ 2016-03-09T08:56:31+08:00 ] 61.163.138.45 /wemall/index.php?m=Admin&c=Login&a=login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000461s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000467s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000513s ]
+SQL: SHOW COLUMNS FROM `wemall_admin` [ RunTime:0.0035s ]
+SQL: SELECT * FROM `wemall_admin` WHERE `username` = 'admin' AND `password` = '21232f297a57a5a743894a0e4a801fc3' LIMIT 1   [ RunTime:0.0012s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000048s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000098s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005875s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005922s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000215s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000249s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000458s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000498s ]
+
+[ 2016-03-09T08:56:33+08:00 ] 61.163.138.45 /wemall/index.php?m=Admin&c=Index&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000416s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000458s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000504s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000333s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000392s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.038861s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038944s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000292s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000340s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000683s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000748s ]
+
+[ 2016-03-09T08:56:33+08:00 ] 61.163.138.45 /wemall/index.php?m=Admin&c=Index&a=set
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000544s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000667s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000740s ]
+SQL: SHOW COLUMNS FROM `wemall_info` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `wemall_info` LIMIT 1   [ RunTime:0.0016s ]
+SQL: SHOW COLUMNS FROM `wemall_alipay` [ RunTime:0.0043s ]
+SQL: SELECT * FROM `wemall_alipay` LIMIT 1   [ RunTime:0.0013s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000142s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000240s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019272s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019343s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000463s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000561s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000617s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000671s ]
+
+[ 2016-03-09T08:56:35+08:00 ] 61.163.138.45 /wemall/index.php?m=Admin&c=Weixin&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000829s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001149s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001269s ]
+SQL: SHOW COLUMNS FROM `wemall_wxconfig` [ RunTime:0.0055s ]
+SQL: SELECT * FROM `wemall_wxconfig` LIMIT 1   [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `wemall_wxmenu` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `wemall_wxmenu`  [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `wemall_wxmessage` [ RunTime:0.0065s ]
+SQL: SELECT * FROM `wemall_wxmessage`  [ RunTime:0.0012s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000233s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000329s ]
+NOTIC: [8] Undefined index: mchid /www/users/HA116102/WEB/wemall/Application/Runtime/Cache/Admin/dc7d4c345f0043a281f65ae5979cac3b.php 第 148 行.
+NOTIC: [8] Undefined index: key /www/users/HA116102/WEB/wemall/Application/Runtime/Cache/Admin/dc7d4c345f0043a281f65ae5979cac3b.php 第 155 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037468s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037560s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000428s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000488s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000842s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000926s ]
+
+[ 2016-03-09T08:56:44+08:00 ] 61.163.138.45 /wemall/index.php?m=Admin&c=Weixin&a=addmenu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000105s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001170s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001344s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001471s ]
+SQL: SHOW COLUMNS FROM `wemall_wxmenu` [ RunTime:0.0021s ]
+SQL: UPDATE `wemall_wxmenu` SET `pid`='0',`name`='进入商城',`type`='click',`url`='',`key`='BUY',`listorder`='',`status`='1' WHERE `id` = 1 [ RunTime:0.0018s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001419s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001523s ]
+
+[ 2016-03-09T08:56:52+08:00 ] 61.163.138.45 /wemall/index.php?m=Admin&c=Weixin&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000667s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001293s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001461s ]
+SQL: SHOW COLUMNS FROM `wemall_wxconfig` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `wemall_wxconfig` LIMIT 1   [ RunTime:0.0013s ]
+SQL: SHOW COLUMNS FROM `wemall_wxmenu` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `wemall_wxmenu`  [ RunTime:0.0024s ]
+SQL: SHOW COLUMNS FROM `wemall_wxmessage` [ RunTime:0.0033s ]
+SQL: SELECT * FROM `wemall_wxmessage`  [ RunTime:0.0018s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000231s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000314s ]
+NOTIC: [8] Undefined index: mchid /www/users/HA116102/WEB/wemall/Application/Runtime/Cache/Admin/dc7d4c345f0043a281f65ae5979cac3b.php 第 148 行.
+NOTIC: [8] Undefined index: key /www/users/HA116102/WEB/wemall/Application/Runtime/Cache/Admin/dc7d4c345f0043a281f65ae5979cac3b.php 第 155 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028519s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028629s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000422s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000485s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000870s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000971s ]
+
+[ 2016-03-09T08:57:02+08:00 ] 61.163.138.45 /wemall/index.php?m=Admin&c=Weixin&a=addmenu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000551s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000661s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000726s ]
+SQL: SHOW COLUMNS FROM `wemall_wxmenu` [ RunTime:0.0028s ]
+SQL: UPDATE `wemall_wxmenu` SET `pid`='0',`name`='进入商城1',`type`='click',`url`='',`key`='BUY',`listorder`='',`status`='1' WHERE `id` = 1 [ RunTime:0.0016s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000056s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000130s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008317s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008377s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000294s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000361s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000675s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000726s ]
+
+[ 2016-03-09T08:57:03+08:00 ] 61.163.138.45 /wemall/index.php?m=Admin&c=Weixin&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000541s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000887s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000969s ]
+SQL: SHOW COLUMNS FROM `wemall_wxconfig` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `wemall_wxconfig` LIMIT 1   [ RunTime:0.0013s ]
+SQL: SHOW COLUMNS FROM `wemall_wxmenu` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `wemall_wxmenu`  [ RunTime:0.0016s ]
+SQL: SHOW COLUMNS FROM `wemall_wxmessage` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `wemall_wxmessage`  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000234s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000339s ]
+NOTIC: [8] Undefined index: mchid /www/users/HA116102/WEB/wemall/Application/Runtime/Cache/Admin/dc7d4c345f0043a281f65ae5979cac3b.php 第 148 行.
+NOTIC: [8] Undefined index: key /www/users/HA116102/WEB/wemall/Application/Runtime/Cache/Admin/dc7d4c345f0043a281f65ae5979cac3b.php 第 155 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024344s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024458s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000524s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000604s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001086s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001213s ]
+
+[ 2016-03-09T08:57:09+08:00 ] 61.163.138.45 /wemall/index.php?m=Admin&c=Weixin&a=addmenu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000854s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001185s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001324s ]
+SQL: SHOW COLUMNS FROM `wemall_wxmenu` [ RunTime:0.0021s ]
+SQL: UPDATE `wemall_wxmenu` SET `pid`='0',`name`='进入商城',`type`='click',`url`='',`key`='BUY',`listorder`='',`status`='1' WHERE `id` = 1 [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000144s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000263s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013094s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013194s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000540s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000634s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001023s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001102s ]
+
+[ 2016-03-09T08:57:11+08:00 ] 61.163.138.45 /wemall/index.php?m=Admin&c=Weixin&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000856s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001420s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001539s ]
+SQL: SHOW COLUMNS FROM `wemall_wxconfig` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `wemall_wxconfig` LIMIT 1   [ RunTime:0.0018s ]
+SQL: SHOW COLUMNS FROM `wemall_wxmenu` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `wemall_wxmenu`  [ RunTime:0.0072s ]
+SQL: SHOW COLUMNS FROM `wemall_wxmessage` [ RunTime:0.0035s ]
+SQL: SELECT * FROM `wemall_wxmessage`  [ RunTime:0.0023s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000233s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000319s ]
+NOTIC: [8] Undefined index: mchid /www/users/HA116102/WEB/wemall/Application/Runtime/Cache/Admin/dc7d4c345f0043a281f65ae5979cac3b.php 第 148 行.
+NOTIC: [8] Undefined index: key /www/users/HA116102/WEB/wemall/Application/Runtime/Cache/Admin/dc7d4c345f0043a281f65ae5979cac3b.php 第 155 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.041253s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.041374s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000412s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000490s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001284s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001384s ]
+
+[ 2016-03-09T09:17:09+08:00 ] ::1 /wemall2.3.1/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000132s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001078s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001187s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000122s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000192s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015256s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015399s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000936s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001025s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001342s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001437s ]
+
+[ 2016-03-09T09:17:10+08:00 ] ::1 /wemall2.3.1/index.php?m=Admin&c=Index&a=set
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000117s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001061s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001161s ]
+SQL: SHOW COLUMNS FROM `wemall_info` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `wemall_info` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `wemall_alipay` [ RunTime:0.0035s ]
+SQL: SELECT * FROM `wemall_alipay` LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000150s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000251s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015334s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015445s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000695s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000774s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001019s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001103s ]
+
+[ 2016-03-09T09:17:15+08:00 ] ::1 /wemall2.3.1/index.php?m=Admin&c=Index&a=settheme&name%5B0%5D=default
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000176s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000771s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000837s ]
+SQL: SHOW COLUMNS FROM `wemall_info` [ RunTime:0.0032s ]
+SQL: UPDATE `wemall_info` SET `theme`='default' WHERE `id` = 1 [ RunTime:0.0539s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000053s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000118s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009708s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009796s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000455s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000502s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000698s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000749s ]
+
+[ 2016-03-09T09:17:16+08:00 ] ::1 /wemall2.3.1/index.php?m=Admin&c=Index&a=set
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000086s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000721s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000781s ]
+SQL: SHOW COLUMNS FROM `wemall_info` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `wemall_info` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `wemall_alipay` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `wemall_alipay` LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000093s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000153s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010530s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010604s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000448s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000496s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000912s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000974s ]
+
+[ 2016-03-09T09:17:19+08:00 ] ::1 /wemall2.3.1/index.php?m=Admin&c=Good&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000079s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000709s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000767s ]
+SQL: SHOW COLUMNS FROM `wemall_good` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wemall_good` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `wemall_good` LIMIT 0,12   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `wemall_menu` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `wemall_menu` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `wemall_menu` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `wemall_menu`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000121s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000192s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012879s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012947s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000446s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000494s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000843s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000929s ]
+
+[ 2016-03-09T09:17:20+08:00 ] ::1 /wemall2.3.1/index.php?m=Admin&c=Order&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000082s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000727s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000784s ]
+SQL: SHOW COLUMNS FROM `wemall_order` [ RunTime:0.0029s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wemall_order` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `wemall_order` ORDER BY id desc LIMIT 0,10   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `wemall_user` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `wemall_user` WHERE ( 1=1 AND id='1' ) LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000111s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000176s ]
+NOTIC: [8] Use of undefined constant cartdata - assumed 'cartdata' D:\xampp\htdocs\wemall2.3.1\Application\Runtime\Cache\Admin\233799a1570c93a9598223bd960beb2c.php 第 144 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' D:\xampp\htdocs\wemall2.3.1\Application\Runtime\Cache\Admin\233799a1570c93a9598223bd960beb2c.php 第 144 行.
+NOTIC: [8] Use of undefined constant price - assumed 'price' D:\xampp\htdocs\wemall2.3.1\Application\Runtime\Cache\Admin\233799a1570c93a9598223bd960beb2c.php 第 144 行.
+NOTIC: [8] Use of undefined constant num - assumed 'num' D:\xampp\htdocs\wemall2.3.1\Application\Runtime\Cache\Admin\233799a1570c93a9598223bd960beb2c.php 第 144 行.
+NOTIC: [8] Undefined variable: menulist D:\xampp\htdocs\wemall2.3.1\Application\Runtime\Cache\Admin\233799a1570c93a9598223bd960beb2c.php 第 175 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014380s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014451s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000557s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000607s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000702s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000751s ]
+
+[ 2016-03-09T09:17:22+08:00 ] ::1 /wemall2.3.1/index.php?m=Admin&c=User&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000085s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001080s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001166s ]
+SQL: SHOW COLUMNS FROM `wemall_user` [ RunTime:0.0027s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wemall_user` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `wemall_user` LIMIT 0,12   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000080s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000139s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009963s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010029s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000446s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000496s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000689s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000739s ]
+
+[ 2016-03-09T09:17:23+08:00 ] ::1 /wemall2.3.1/index.php?m=Admin&c=Weixin&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000081s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000835s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000914s ]
+SQL: SHOW COLUMNS FROM `wemall_wxconfig` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `wemall_wxconfig` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `wemall_wxmenu` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `wemall_wxmenu`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `wemall_wxmessage` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `wemall_wxmessage`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000159s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000223s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016633s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016710s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000538s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000593s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001018s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001104s ]
+
+[ 2016-03-09T09:28:12+08:00 ] ::1 /wemall2.3.1/index.php?m=Admin&c=Weixin&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000101s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001081s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001166s ]
+SQL: SHOW COLUMNS FROM `wemall_wxconfig` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `wemall_wxconfig` LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `wemall_wxmenu` [ RunTime:0.0035s ]
+SQL: SELECT * FROM `wemall_wxmenu`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `wemall_wxmessage` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `wemall_wxmessage`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000153s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000215s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016716s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016795s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000597s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000646s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001287s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001369s ]
+
+[ 2016-03-09T09:28:46+08:00 ] ::1 /wemall2.3.1/index.php?m=Admin&c=Weixin&a=addmessage
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000133s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001916s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002072s ]
+SQL: SHOW COLUMNS FROM `wemall_wxmessage` [ RunTime:0.0031s ]
+SQL: UPDATE `wemall_wxmessage` SET `type`='0',`title`='wemall',`description`='欢迎来到wemall1',`url`='http://www.xxx.com/index.php?m=App&amp;c=Index&amp;a=index',`key`='BUY' WHERE `id` = 1 [ RunTime:0.0498s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000063s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000148s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009923s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009987s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000588s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000636s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000816s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000892s ]
+
+[ 2016-03-09T09:28:47+08:00 ] ::1 /wemall2.3.1/index.php?m=Admin&c=Weixin&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000109s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001046s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001120s ]
+SQL: SHOW COLUMNS FROM `wemall_wxconfig` [ RunTime:0.0036s ]
+SQL: SELECT * FROM `wemall_wxconfig` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `wemall_wxmenu` [ RunTime:0.0035s ]
+SQL: SELECT * FROM `wemall_wxmenu`  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `wemall_wxmessage` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `wemall_wxmessage`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000158s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000235s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016951s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017051s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000842s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000919s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001521s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001621s ]
+
+[ 2016-03-09T09:36:29+08:00 ] ::1 /wemall2.3.1/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000061s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000141s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000783s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000843s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000123s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000199s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014118s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014211s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000525s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000575s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000833s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000905s ]
+
+[ 2016-03-09T09:36:30+08:00 ] ::1 /wemall2.3.1/index.php?m=Admin&c=Index&a=set
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000124s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001296s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001418s ]
+SQL: SHOW COLUMNS FROM `wemall_info` [ RunTime:0.0138s ]
+SQL: SELECT * FROM `wemall_info` LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `wemall_alipay` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `wemall_alipay` LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000093s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000157s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012222s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012327s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000786s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000865s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000995s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001072s ]
+
+[ 2016-03-09T09:36:31+08:00 ] ::1 /wemall2.3.1/index.php?m=Admin&c=Weixin&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000081s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000754s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000813s ]
+SQL: SHOW COLUMNS FROM `wemall_wxconfig` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `wemall_wxconfig` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `wemall_wxmenu` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `wemall_wxmenu`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `wemall_wxmessage` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `wemall_wxmessage`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000162s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000232s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016913s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016991s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000501s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000550s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000863s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000924s ]
+
+[ 2016-03-09T09:36:33+08:00 ] ::1 /wemall2.3.1/index.php?m=Admin&c=Util&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000083s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000763s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000822s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000073s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000133s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007939s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000503s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000551s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000762s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000819s ]
+
+[ 2016-03-09T09:36:34+08:00 ] ::1 /wemall2.3.1/index.php?m=Admin&c=Weixin&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000082s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000931s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001022s ]
+SQL: SHOW COLUMNS FROM `wemall_wxconfig` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `wemall_wxconfig` LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `wemall_wxmenu` [ RunTime:0.0033s ]
+SQL: SELECT * FROM `wemall_wxmenu`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `wemall_wxmessage` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `wemall_wxmessage`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000154s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000216s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016091s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016171s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000519s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000568s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000889s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000950s ]
+
+[ 2016-03-09T09:36:35+08:00 ] ::1 /wemall2.3.1/index.php?m=Admin&c=Util&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000083s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000911s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001012s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000112s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000204s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010298s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010384s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000521s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000570s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000762s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000814s ]
+
+[ 2016-03-09T09:36:35+08:00 ] ::1 /wemall2.3.1/index.php?m=Admin&c=Weixin&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000084s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001042s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001127s ]
+SQL: SHOW COLUMNS FROM `wemall_wxconfig` [ RunTime:0.0037s ]
+SQL: SELECT * FROM `wemall_wxconfig` LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `wemall_wxmenu` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `wemall_wxmenu`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `wemall_wxmessage` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `wemall_wxmessage`  [ RunTime:0.0426s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000152s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000215s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017144s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017228s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000518s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000566s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000980s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001149s ]
+
+[ 2016-03-09T09:37:23+08:00 ] ::1 /wemall2.3.1/index.php?m=Admin&c=User&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000138s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000784s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000856s ]
+SQL: SHOW COLUMNS FROM `wemall_user` [ RunTime:0.0028s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wemall_user` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `wemall_user` LIMIT 0,12   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000080s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000140s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010169s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010233s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000500s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000551s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000762s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000814s ]
+
+[ 2016-03-09T09:37:24+08:00 ] ::1 /wemall2.3.1/index.php?m=Admin&c=Weixin&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000082s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000866s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000953s ]
+SQL: SHOW COLUMNS FROM `wemall_wxconfig` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `wemall_wxconfig` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `wemall_wxmenu` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `wemall_wxmenu`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `wemall_wxmessage` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `wemall_wxmessage`  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000151s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000213s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017045s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017128s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000528s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000579s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000934s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000994s ]
+
+[ 2016-03-09T09:37:25+08:00 ] ::1 /wemall2.3.1/index.php?m=Admin&c=User&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000082s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001121s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001237s ]
+SQL: SHOW COLUMNS FROM `wemall_user` [ RunTime:0.0031s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wemall_user` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `wemall_user` LIMIT 0,12   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000078s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000135s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009760s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009826s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000504s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000554s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000741s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000792s ]
+
+[ 2016-03-09T09:37:26+08:00 ] ::1 /wemall2.3.1/index.php?m=Admin&c=Order&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000081s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001394s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001484s ]
+SQL: SHOW COLUMNS FROM `wemall_order` [ RunTime:0.0026s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wemall_order` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `wemall_order` ORDER BY id desc LIMIT 0,10   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `wemall_user` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `wemall_user` WHERE ( 1=1 AND id='1' ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000110s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000174s ]
+NOTIC: [8] Use of undefined constant cartdata - assumed 'cartdata' D:\xampp\htdocs\wemall2.3.1\Application\Runtime\Cache\Admin\233799a1570c93a9598223bd960beb2c.php 第 144 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' D:\xampp\htdocs\wemall2.3.1\Application\Runtime\Cache\Admin\233799a1570c93a9598223bd960beb2c.php 第 144 行.
+NOTIC: [8] Use of undefined constant price - assumed 'price' D:\xampp\htdocs\wemall2.3.1\Application\Runtime\Cache\Admin\233799a1570c93a9598223bd960beb2c.php 第 144 行.
+NOTIC: [8] Use of undefined constant num - assumed 'num' D:\xampp\htdocs\wemall2.3.1\Application\Runtime\Cache\Admin\233799a1570c93a9598223bd960beb2c.php 第 144 行.
+NOTIC: [8] Undefined variable: menulist D:\xampp\htdocs\wemall2.3.1\Application\Runtime\Cache\Admin\233799a1570c93a9598223bd960beb2c.php 第 175 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014693s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014757s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000604s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000655s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000768s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000818s ]
+
+[ 2016-03-09T09:37:28+08:00 ] ::1 /wemall2.3.1/index.php?m=Admin&c=Good&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000083s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000781s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000839s ]
+SQL: SHOW COLUMNS FROM `wemall_good` [ RunTime:0.0026s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wemall_good` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `wemall_good` LIMIT 0,12   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `wemall_menu` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `wemall_menu` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `wemall_menu` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `wemall_menu`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000124s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000187s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012872s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012959s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000524s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000572s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000791s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000866s ]
+
+[ 2016-03-09T09:37:34+08:00 ] ::1 /wemall2.3.1/index.php?m=Admin&c=Good&a=getgoodid
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000078s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000698s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000755s ]
+SQL: SHOW COLUMNS FROM `wemall_good` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `wemall_good` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2016-03-09T09:37:39+08:00 ] ::1 /wemall2.3.1/index.php?m=Admin&c=Good&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000089s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000782s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000851s ]
+SQL: SHOW COLUMNS FROM `wemall_good` [ RunTime:0.0029s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wemall_good` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `wemall_good` LIMIT 0,12   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `wemall_menu` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `wemall_menu` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `wemall_menu` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `wemall_menu`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000124s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000187s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014120s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014202s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000460s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000510s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000753s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000826s ]
+
+[ 2016-03-09T09:37:50+08:00 ] ::1 /wemall2.3.1/index.php?m=Admin&c=Good&a=getgoodid
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000084s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001099s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001183s ]
+SQL: SHOW COLUMNS FROM `wemall_good` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `wemall_good` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2016-03-09T09:37:53+08:00 ] ::1 /wemall2.3.1/index.php?m=Admin&c=Good&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000082s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000718s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000780s ]
+SQL: SHOW COLUMNS FROM `wemall_good` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wemall_good` LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `wemall_good` LIMIT 0,12   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `wemall_menu` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `wemall_menu` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `wemall_menu` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `wemall_menu`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000144s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000243s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014348s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014413s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000476s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000526s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000751s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000810s ]
+
+[ 2016-03-09T09:37:54+08:00 ] ::1 /wemall2.3.1/index.php?m=Admin&c=Good&a=getgoodid
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000082s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001419s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001510s ]
+SQL: SHOW COLUMNS FROM `wemall_good` [ RunTime:0.0033s ]
+SQL: SELECT * FROM `wemall_good` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2016-03-09T09:37:58+08:00 ] ::1 /wemall2.3.1/index.php?m=Admin&c=Good&a=addgood
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000185s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000809s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000896s ]
+SQL: SHOW COLUMNS FROM `wemall_good` [ RunTime:0.0042s ]
+SQL: UPDATE `wemall_good` SET `menu_id`='3',`name`='番茄',`price`='3',`old_price`='5',`sort`='1',`status`='1',`detail`='' WHERE `id` = 2 [ RunTime:0.0492s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000065s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000160s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011446s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011568s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000780s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000904s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001226s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001329s ]
+
+[ 2016-03-09T09:37:59+08:00 ] ::1 /wemall2.3.1/index.php?m=Admin&c=Good&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000098s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001102s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001194s ]
+SQL: SHOW COLUMNS FROM `wemall_good` [ RunTime:0.0037s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wemall_good` LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `wemall_good` LIMIT 0,12   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `wemall_menu` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `wemall_menu` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `wemall_menu` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `wemall_menu`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000176s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000255s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016864s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016948s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000608s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000668s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000983s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001078s ]
+
+[ 2016-03-09T09:38:01+08:00 ] ::1 /wemall2.3.1/index.php?m=Admin&c=Good&a=getgoodid
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000122s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001236s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001330s ]
+SQL: SHOW COLUMNS FROM `wemall_good` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `wemall_good` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2016-03-09T09:38:04+08:00 ] ::1 /wemall2.3.1/index.php?m=Admin&c=Good&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000083s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000738s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000800s ]
+SQL: SHOW COLUMNS FROM `wemall_good` [ RunTime:0.0035s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wemall_good` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `wemall_good` LIMIT 0,12   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `wemall_menu` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `wemall_menu` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `wemall_menu` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `wemall_menu`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000174s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000296s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013992s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014062s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000476s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000526s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000896s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2016-03-09T10:21:27+08:00 ] ::1 /wemall2.3.1/index.php?m=Admin&c=Good&a=getgoodid
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000104s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000937s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001065s ]
+SQL: SHOW COLUMNS FROM `wemall_good` [ RunTime:0.0355s ]
+SQL: SELECT * FROM `wemall_good` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0005s ]
+
+[ 2016-03-09T10:21:32+08:00 ] ::1 /wemall2.3.1/index.php?m=Admin&c=Good&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000121s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000807s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000878s ]
+SQL: SHOW COLUMNS FROM `wemall_good` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wemall_good` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `wemall_good` LIMIT 0,12   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `wemall_menu` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `wemall_menu` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `wemall_menu` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `wemall_menu`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000133s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000194s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013168s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013240s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000501s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000548s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000882s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000961s ]
+
+[ 2016-03-09T10:21:38+08:00 ] ::1 /wemall2.3.1/index.php?m=Admin&c=Order&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000083s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000763s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000820s ]
+SQL: SHOW COLUMNS FROM `wemall_order` [ RunTime:0.0029s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wemall_order` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `wemall_order` ORDER BY id desc LIMIT 0,10   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `wemall_user` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `wemall_user` WHERE ( 1=1 AND id='1' ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000109s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000174s ]
+NOTIC: [8] Use of undefined constant cartdata - assumed 'cartdata' D:\xampp\htdocs\wemall2.3.1\Application\Runtime\Cache\Admin\233799a1570c93a9598223bd960beb2c.php 第 144 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' D:\xampp\htdocs\wemall2.3.1\Application\Runtime\Cache\Admin\233799a1570c93a9598223bd960beb2c.php 第 144 行.
+NOTIC: [8] Use of undefined constant price - assumed 'price' D:\xampp\htdocs\wemall2.3.1\Application\Runtime\Cache\Admin\233799a1570c93a9598223bd960beb2c.php 第 144 行.
+NOTIC: [8] Use of undefined constant num - assumed 'num' D:\xampp\htdocs\wemall2.3.1\Application\Runtime\Cache\Admin\233799a1570c93a9598223bd960beb2c.php 第 144 行.
+NOTIC: [8] Undefined variable: menulist D:\xampp\htdocs\wemall2.3.1\Application\Runtime\Cache\Admin\233799a1570c93a9598223bd960beb2c.php 第 175 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014673s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014731s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000513s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000561s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000738s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000788s ]
+
+[ 2016-03-09T10:21:40+08:00 ] ::1 /wemall2.3.1/index.php?m=Admin&c=User&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000082s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001295s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001407s ]
+SQL: SHOW COLUMNS FROM `wemall_user` [ RunTime:0.0031s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wemall_user` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `wemall_user` LIMIT 0,12   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000081s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000138s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009874s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009940s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000522s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000574s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001139s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001238s ]
+
+[ 2016-03-09T10:21:42+08:00 ] ::1 /wemall2.3.1/index.php?m=Admin&c=Weixin&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000082s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000908s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000988s ]
+SQL: SHOW COLUMNS FROM `wemall_wxconfig` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `wemall_wxconfig` LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `wemall_wxmenu` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `wemall_wxmenu`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `wemall_wxmessage` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `wemall_wxmessage`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000163s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000228s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016556s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016634s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000513s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000560s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000950s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001010s ]
+
+[ 2016-03-09T10:21:56+08:00 ] ::1 /wemall2.3.1/index.php?m=Admin&c=Good&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000085s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000814s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000888s ]
+SQL: SHOW COLUMNS FROM `wemall_good` [ RunTime:0.0028s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wemall_good` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `wemall_good` LIMIT 0,12   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `wemall_menu` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `wemall_menu` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `wemall_menu` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `wemall_menu`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000121s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000182s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013538s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013619s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000513s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000562s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001120s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001198s ]
+
+[ 2016-03-09T10:21:57+08:00 ] ::1 /wemall2.3.1/index.php?m=Admin&c=Menu&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000082s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000862s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000930s ]
+SQL: SHOW COLUMNS FROM `wemall_menu` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `wemall_menu`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000099s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000159s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012128s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012232s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000597s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000647s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000746s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000794s ]
+
+[ 2016-03-09T10:21:58+08:00 ] ::1 /wemall2.3.1/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000087s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000773s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000834s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000106s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000179s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012305s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012365s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000504s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000551s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000745s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000846s ]
+
+[ 2016-03-09T10:21:59+08:00 ] ::1 /wemall2.3.1/index.php?m=Admin&c=Index&a=set
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000119s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001450s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001559s ]
+SQL: SHOW COLUMNS FROM `wemall_info` [ RunTime:0.0038s ]
+SQL: SELECT * FROM `wemall_info` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `wemall_alipay` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `wemall_alipay` LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000139s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000232s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012954s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013066s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001279s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001374s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001524s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001621s ]
+
+[ 2016-03-09T10:23:54+08:00 ] ::1 /wemall2.3.1/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000087s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001026s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001096s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000103s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000168s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011722s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011791s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000624s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000675s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000966s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001057s ]
+
+[ 2016-03-09T10:23:55+08:00 ] ::1 /wemall2.3.1/index.php?m=Admin&c=Index&a=set
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000096s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001260s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001344s ]
+SQL: SHOW COLUMNS FROM `wemall_info` [ RunTime:0.0035s ]
+SQL: SELECT * FROM `wemall_info` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `wemall_alipay` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `wemall_alipay` LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000143s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000227s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012456s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012538s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000719s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000774s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000922s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000988s ]
+
+[ 2016-03-09T10:24:15+08:00 ] ::1 /wemall2.3.1/index.php?m=Admin&c=User&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000164s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000767s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000828s ]
+SQL: SHOW COLUMNS FROM `wemall_user` [ RunTime:0.0028s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wemall_user` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `wemall_user` LIMIT 0,12   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000102s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000180s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010682s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010756s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000486s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000535s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000710s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000761s ]
+
+[ 2016-03-09T10:24:16+08:00 ] ::1 /wemall2.3.1/index.php?m=Admin&c=Weixin&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000082s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001089s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001211s ]
+SQL: SHOW COLUMNS FROM `wemall_wxconfig` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `wemall_wxconfig` LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `wemall_wxmenu` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `wemall_wxmenu`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `wemall_wxmessage` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `wemall_wxmessage`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000153s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000216s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016884s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016963s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000461s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000509s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000793s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000851s ]
+
+[ 2016-03-09T10:24:22+08:00 ] ::1 /wemall2.3.1/index.php?m=Admin&c=Good&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000080s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000858s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000924s ]
+SQL: SHOW COLUMNS FROM `wemall_good` [ RunTime:0.0028s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wemall_good` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `wemall_good` LIMIT 0,12   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `wemall_menu` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `wemall_menu` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `wemall_menu` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `wemall_menu`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000124s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000186s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013585s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013650s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000460s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000508s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000770s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000844s ]
+
+[ 2016-03-09T10:24:23+08:00 ] ::1 /wemall2.3.1/index.php?m=Admin&c=Order&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000082s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000852s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000913s ]
+SQL: SHOW COLUMNS FROM `wemall_order` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wemall_order` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `wemall_order` ORDER BY id desc LIMIT 0,10   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `wemall_user` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `wemall_user` WHERE ( 1=1 AND id='1' ) LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000107s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000168s ]
+NOTIC: [8] Use of undefined constant cartdata - assumed 'cartdata' D:\xampp\htdocs\wemall2.3.1\Application\Runtime\Cache\Admin\233799a1570c93a9598223bd960beb2c.php 第 144 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' D:\xampp\htdocs\wemall2.3.1\Application\Runtime\Cache\Admin\233799a1570c93a9598223bd960beb2c.php 第 144 行.
+NOTIC: [8] Use of undefined constant price - assumed 'price' D:\xampp\htdocs\wemall2.3.1\Application\Runtime\Cache\Admin\233799a1570c93a9598223bd960beb2c.php 第 144 行.
+NOTIC: [8] Use of undefined constant num - assumed 'num' D:\xampp\htdocs\wemall2.3.1\Application\Runtime\Cache\Admin\233799a1570c93a9598223bd960beb2c.php 第 144 行.
+NOTIC: [8] Undefined variable: menulist D:\xampp\htdocs\wemall2.3.1\Application\Runtime\Cache\Admin\233799a1570c93a9598223bd960beb2c.php 第 175 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014054s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014125s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000458s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000503s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000713s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000764s ]
+
+[ 2016-03-09T10:24:24+08:00 ] ::1 /wemall2.3.1/index.php?m=Admin&c=Good&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000078s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000851s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001292s ]
+SQL: SHOW COLUMNS FROM `wemall_good` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wemall_good` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `wemall_good` LIMIT 0,12   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `wemall_menu` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `wemall_menu` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `wemall_menu` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `wemall_menu`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000123s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000184s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013349s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013414s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000455s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000503s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000797s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000869s ]
+
+[ 2016-03-09T10:24:24+08:00 ] ::1 /wemall2.3.1/index.php?m=Admin&c=Order&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000082s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000723s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000781s ]
+SQL: SHOW COLUMNS FROM `wemall_order` [ RunTime:0.0026s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wemall_order` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `wemall_order` ORDER BY id desc LIMIT 0,10   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `wemall_user` [ RunTime:0.0037s ]
+SQL: SELECT * FROM `wemall_user` WHERE ( 1=1 AND id='1' ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000106s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000167s ]
+NOTIC: [8] Use of undefined constant cartdata - assumed 'cartdata' D:\xampp\htdocs\wemall2.3.1\Application\Runtime\Cache\Admin\233799a1570c93a9598223bd960beb2c.php 第 144 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' D:\xampp\htdocs\wemall2.3.1\Application\Runtime\Cache\Admin\233799a1570c93a9598223bd960beb2c.php 第 144 行.
+NOTIC: [8] Use of undefined constant price - assumed 'price' D:\xampp\htdocs\wemall2.3.1\Application\Runtime\Cache\Admin\233799a1570c93a9598223bd960beb2c.php 第 144 行.
+NOTIC: [8] Use of undefined constant num - assumed 'num' D:\xampp\htdocs\wemall2.3.1\Application\Runtime\Cache\Admin\233799a1570c93a9598223bd960beb2c.php 第 144 行.
+NOTIC: [8] Undefined variable: menulist D:\xampp\htdocs\wemall2.3.1\Application\Runtime\Cache\Admin\233799a1570c93a9598223bd960beb2c.php 第 175 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013593s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013651s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000467s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000514s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000751s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000807s ]
+
+[ 2016-03-09T10:24:32+08:00 ] ::1 /wemall2.3.1/index.php?m=Admin&c=Good&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000147s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000753s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000818s ]
+SQL: SHOW COLUMNS FROM `wemall_good` [ RunTime:0.0033s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wemall_good` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `wemall_good` LIMIT 0,12   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `wemall_menu` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `wemall_menu` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `wemall_menu` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `wemall_menu`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000123s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000185s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013260s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013332s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000467s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000514s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000798s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000874s ]
+
+[ 2016-03-09T10:24:34+08:00 ] ::1 /wemall2.3.1/index.php?m=Admin&c=Order&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000081s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000861s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000923s ]
+SQL: SHOW COLUMNS FROM `wemall_order` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wemall_order` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `wemall_order` ORDER BY id desc LIMIT 0,10   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `wemall_user` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `wemall_user` WHERE ( 1=1 AND id='1' ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000108s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000170s ]
+NOTIC: [8] Use of undefined constant cartdata - assumed 'cartdata' D:\xampp\htdocs\wemall2.3.1\Application\Runtime\Cache\Admin\233799a1570c93a9598223bd960beb2c.php 第 144 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' D:\xampp\htdocs\wemall2.3.1\Application\Runtime\Cache\Admin\233799a1570c93a9598223bd960beb2c.php 第 144 行.
+NOTIC: [8] Use of undefined constant price - assumed 'price' D:\xampp\htdocs\wemall2.3.1\Application\Runtime\Cache\Admin\233799a1570c93a9598223bd960beb2c.php 第 144 行.
+NOTIC: [8] Use of undefined constant num - assumed 'num' D:\xampp\htdocs\wemall2.3.1\Application\Runtime\Cache\Admin\233799a1570c93a9598223bd960beb2c.php 第 144 行.
+NOTIC: [8] Undefined variable: menulist D:\xampp\htdocs\wemall2.3.1\Application\Runtime\Cache\Admin\233799a1570c93a9598223bd960beb2c.php 第 175 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014469s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014530s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000468s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000514s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000697s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000745s ]
+
+[ 2016-03-09T10:24:36+08:00 ] ::1 /wemall2.3.1/index.php?m=Admin&c=Good&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000159s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000833s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000912s ]
+SQL: SHOW COLUMNS FROM `wemall_good` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wemall_good` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `wemall_good` LIMIT 0,12   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `wemall_menu` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `wemall_menu` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `wemall_menu` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `wemall_menu`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000125s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000187s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012931s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012994s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000462s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000509s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001031s ]
+
+[ 2016-03-09T10:24:36+08:00 ] ::1 /wemall2.3.1/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000080s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000740s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000810s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000100s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000168s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012133s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012194s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000464s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000511s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000738s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000804s ]
+
+[ 2016-03-09T10:24:37+08:00 ] ::1 /wemall2.3.1/index.php?m=Admin&c=Index&a=set
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000126s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001489s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001598s ]
+SQL: SHOW COLUMNS FROM `wemall_info` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `wemall_info` LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `wemall_alipay` [ RunTime:0.0035s ]
+SQL: SELECT * FROM `wemall_alipay` LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000141s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000236s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014893s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014995s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000948s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001026s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001280s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001362s ]
+
+[ 2016-03-09T10:24:38+08:00 ] ::1 /wemall2.3.1/index.php?m=Admin&c=Menu&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000126s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001317s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001417s ]
+SQL: SHOW COLUMNS FROM `wemall_menu` [ RunTime:0.0033s ]
+SQL: SELECT * FROM `wemall_menu`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000101s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000165s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015379s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015469s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000616s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000664s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000832s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000881s ]
+
+[ 2016-03-09T10:24:40+08:00 ] ::1 /wemall2.3.1/index.php?m=Admin&c=Good&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000092s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001102s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001204s ]
+SQL: SHOW COLUMNS FROM `wemall_good` [ RunTime:0.0028s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wemall_good` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `wemall_good` LIMIT 0,12   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `wemall_menu` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `wemall_menu` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `wemall_menu` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `wemall_menu`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000123s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000184s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013199s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013263s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000580s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000627s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000935s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001015s ]
+
+[ 2016-03-09T10:24:40+08:00 ] ::1 /wemall2.3.1/index.php?m=Admin&c=Menu&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000082s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000950s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001030s ]
+SQL: SHOW COLUMNS FROM `wemall_menu` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `wemall_menu`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000159s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000261s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012496s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012575s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000834s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000897s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000914s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000966s ]
+
+[ 2016-03-09T10:24:41+08:00 ] ::1 /wemall2.3.1/index.php?m=Admin&c=Good&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000082s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000831s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000890s ]
+SQL: SHOW COLUMNS FROM `wemall_good` [ RunTime:0.0027s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wemall_good` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `wemall_good` LIMIT 0,12   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `wemall_menu` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `wemall_menu` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `wemall_menu` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `wemall_menu`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000124s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000187s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014303s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014366s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000586s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000642s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000934s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001010s ]
+
+[ 2016-03-09T10:24:42+08:00 ] ::1 /wemall2.3.1/index.php?m=Admin&c=Menu&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000084s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000912s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000991s ]
+SQL: SHOW COLUMNS FROM `wemall_menu` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `wemall_menu`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000097s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000156s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012073s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012164s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000864s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000934s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000849s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000901s ]
+
+[ 2016-03-09T10:24:42+08:00 ] ::1 /wemall2.3.1/index.php?m=Admin&c=Good&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000107s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000961s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001035s ]
+SQL: SHOW COLUMNS FROM `wemall_good` [ RunTime:0.0026s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wemall_good` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `wemall_good` LIMIT 0,12   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `wemall_menu` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `wemall_menu` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `wemall_menu` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `wemall_menu`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000121s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000182s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013860s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013929s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000597s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000644s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001153s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001245s ]
+
+[ 2016-03-09T10:33:55+08:00 ] ::1 /wemall2.3.1/index.php?m=Admin&c=Util&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000087s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000778s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000837s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000075s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000141s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009318s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009379s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000444s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000492s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000687s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000739s ]
+
+[ 2016-03-09T10:33:57+08:00 ] ::1 /wemall2.3.1/index.php?m=Admin&c=Weixin&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000124s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001078s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001178s ]
+SQL: SHOW COLUMNS FROM `wemall_wxconfig` [ RunTime:0.0044s ]
+SQL: SELECT * FROM `wemall_wxconfig` LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `wemall_wxmenu` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `wemall_wxmenu`  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `wemall_wxmessage` [ RunTime:0.0038s ]
+SQL: SELECT * FROM `wemall_wxmessage`  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000152s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000215s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026815s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026947s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000816s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000891s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001103s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001187s ]
+
+[ 2016-03-09T10:47:51+08:00 ] ::1 /wemall2.3.1/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000083s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000900s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000960s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000103s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000168s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012398s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012466s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000665s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000714s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001011s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001085s ]
+
+[ 2016-03-09T10:47:52+08:00 ] ::1 /wemall2.3.1/index.php?m=Admin&c=Index&a=set
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000123s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001247s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001349s ]
+SQL: SHOW COLUMNS FROM `wemall_info` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `wemall_info` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `wemall_alipay` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `wemall_alipay` LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000143s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000239s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015945s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016048s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000645s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000699s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001206s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001271s ]
+

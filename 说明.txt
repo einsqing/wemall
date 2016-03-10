@@ -1,0 +1,15 @@
+开源版使用教程
+开源版把install文件夹下的install.lock删除之后可进行自动安装
+
+后台访问地址：http:// www.xxx.com/index.php?m=Admin&c=Index&a=index
+前台访问地址：http:// www.xxx.com/ index.php?m=App&c=Index&a=index
+
+ 
+菜单管理：click类型时不设置URL，点击事件为BUY，可触发自定义回复，view类型可设置url，点击类型不设置
+ 
+
+url是前台访问地址：http:// www.xxx.com/ index.php?m=App&c=Index&a=index
+关键词：BUY
+ 
+
+ 

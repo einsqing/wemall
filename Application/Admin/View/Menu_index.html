@@ -1,0 +1,114 @@
+<include file="Public:header"/>
+<div class="col-sm-12 widget-container-span">
+	<div class="widget-box transparent">
+		<div class="widget-header">
+			<div class="widget-toolbar no-border">
+				<ul class="nav nav-tabs" id="myTab">
+					<li class="active"><a data-toggle="tab" href="#home1">菜单管理</a></li>
+					<li><a data-toggle="tab" href="#home2">添加/修改菜单</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="widget-body">
+			<div class="widget-main padding-12 no-padding-left no-padding-right">
+				<div class="tab-content padding-4">
+					<div id="home1" class="tab-pane in active">
+						<div class="row">
+							<div class="col-xs-12 no-padding-right">
+								<div class="table-responsive">
+									<table id="sample-table-1"
+										class="table table-striped table-bordered table-hover">
+										<thead>
+											<tr>
+												<!-- <th class="center"><label> <input
+														type="checkbox" class="ace"> <span class="lbl"></span>
+												</label></th> -->
+												<th>ID</th>
+												<th>分类名称</th>
+												<th class="hidden-480">操作</th>
+											</tr>
+										</thead>
+
+										<tbody>
+										<volist name="menu" id="menu">
+											<tr>
+												<!-- <td class="center"><label> <input
+														type="checkbox" class="ace"> <span class="lbl"></span>
+												</label></td> -->
+
+												<td parent="{$menu.pid}">{$menu.id}</td>
+												<td class="hidden-480">{$menu.name}</td>
+
+												<td>
+												<!-- <a href="javascript:void(0);" onclick="addSubmenu(this)" class="addsub btn btn-white btn-sm">添加子类</a> -->
+												<a href="javascript:void(0);" onclick="reSubmenu(this)" class="btn btn-white btn-sm">修改</a><a class="J_ajax_del btn btn-white btn-sm" href="{:U('Admin/Menu/del',array('id'=>$menu['id']))}">删除</a></td>
+											</tr>
+										</volist>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div id="home2" class="tab-pane in">
+						<form class="form-horizontal J_ajaxForm" id="myform" action="{:U('Admin/Menu/addmenu')}" method="post">
+							<div class="tabbable">
+								<div class="tab-content">
+									<div class="tab-pane active">
+										<table cellpadding="2" cellspacing="2" width="100%">
+											<tbody>
+												<tr>
+													<td width="140">上级:</td>
+													<td>
+														<select name="parent" class="normal_select" disabled="disabled">
+															<option value="0">作为一级分类</option>
+															<volist name="menulist" id="menulist">
+																<option value="{$menulist.id}">{$menulist.name}</option>
+															</volist>
+														</select>
+													</td>
+												</tr>
+												<tr>
+													<td>名称:</td>
+													<td><input type="text" class="input" name="name"
+														value=""><input type="hidden" name="addmenu" value="0"></td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+							<div class="form-actions">
+								<button class="btn btn-primary btn_submit J_ajax_submit_btn"
+									type="submit">提交</button>
+								<a class="btn" href="">返回</a>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<script type="text/javascript">
+			function addSubmenu(o) {
+				var subid = $(o).parent().prev().prev().html();
+				$('select[name="parent"]').val(subid);
+				$('input[name="addmenu"]').val('0');
+				$('input[name="name"]').val('');
+				
+				$('#myTab li').eq(1).find('a').click();
+			}
+			function reSubmenu(o){
+				var name = $(o).parent().prev().html().replace(/&nbsp;/g,'').replace('├─','');
+				var pid = $(o).parent().prev().prev().attr('parent');
+				var subid = $(o).parent().prev().prev().html();
+				$('select[name="parent"]').val(pid);
+				$('input[name="name"]').val(name);
+				$('input[name="addmenu"]').val(subid);
+				$('#myTab li').eq(1).find('a').click();
+			}
+		</script>
+	</div>
+</div>
