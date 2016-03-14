@@ -234,7 +234,7 @@ CREATE TABLE `wemall_user` (
   `uid` text NOT NULL,
   `username` text NOT NULL,
   `phone` text NOT NULL,
-  `password` text NOT NULL,
+  `password` text DEFAULT NULL,
   `address` text NOT NULL,
   `time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
