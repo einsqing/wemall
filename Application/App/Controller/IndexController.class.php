@@ -55,13 +55,14 @@ class IndexController extends Controller {
 	}
 	public function addorder() {
 		$uid = htmlspecialchars ( I("post.uid"));
+
+		$userData = I("post.userData");
+		$username = $userData [0] [value];
+		$phone = $userData [1] [value];
+		$pay = $userData [2] [value];
+		$address = $userData [3] [value];
+		$note = $userData [4] [value];
 		
-		$username = I("post.userData") [0] [value];
-		$phone = I("post.userData") [1] [value];
-		$pay = I("post.userData") [2] [value];
-		
-		$address = I("post.userData") [3] [value];
-		$note = I("post.userData") [4] [value];
 		$totalprice = I("post.totalPrice");
 		$cartdata = stripslashes ( I("post.cartData") );
 		
