@@ -51,7 +51,7 @@ CREATE TABLE `wemall_admin` (
 --
 
 INSERT INTO `wemall_admin` (`id`, `username`, `password`, `time`) VALUES
-(1, 'admin', '21232f297a57a5a743894a0e4a801fc3', '2016-03-03 07:21:15');
+-- (1, 'admin', '21232f297a57a5a743894a0e4a801fc3', '2016-03-03 07:21:15');
 
 -- --------------------------------------------------------
 

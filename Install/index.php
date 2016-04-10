@@ -115,7 +115,7 @@ switch ($step) {
             $dbHost = trim($_POST['dbhost']);
             $dbPort = trim($_POST['dbport']);
             $dbName = trim($_POST['dbname']);
-            $dbHost = empty($dbPort) || $dbPort == 3306 ? $dbHost : $dbHost . ':' . $dbPort;
+            //$dbHost = empty($dbPort) || $dbPort == 3306 ? $dbHost : $dbHost . ':' . $dbPort;
             $dbUser = trim($_POST['dbuser']);
             $dbPwd = trim($_POST['dbpw']);
             $dbPrefix = empty($_POST['dbprefix']) ? 'wemall_' : trim($_POST['dbprefix']);
@@ -125,12 +125,12 @@ switch ($step) {
 			$config = array();      
 			$config['DB_TYPE']='mysql';
             $config['DB_HOST'] = $dbHost;
+            $config['DB_PORT'] = $dbPort;
             $config['DB_NAME'] = $dbName;
             $config['DB_USER'] = $dbUser;
             $config['DB_PWD'] = $dbPwd;
-            $config['DB_PORT'] = $dbPort;
             $config['DB_PREFIX'] = $dbPrefix;  
-			$conn = @ mysql_connect($dbHost, $dbUser, $dbPwd);
+			$conn = @ mysql_connect($dbHost.":".$dbPort, $dbUser, $dbPwd);
             
             mysql_query("set names 'utf8'"); 
             //创建数据库
@@ -140,7 +140,7 @@ switch ($step) {
             mysql_select_db($dbName , $conn);
             //读取数据文件
             $sqldata = file_get_contents(SITEDIR . 'Install/' . $sqlFile);
-            $sqldata = str_replace('dbprefix_',$dbPrefix,$sqldata);
+            $sqldata = str_replace('wemall_',$dbPrefix,$sqldata);
             $sqlFormat = sql_split($sqldata, $dbPrefix);
 
             //创建配置文件
@@ -149,11 +149,12 @@ switch ($step) {
             fclose($fp);
             
             $configStr1 = str_replace("db_host",$dbHost,$configStr1);   //初始化数据库服务器
+            $configStr1 = str_replace("db_port", $dbPort, $configStr1);
             $configStr1 = str_replace("db_name",$dbName,$configStr1);       //初始化数据库名字
             $configStr1 = str_replace("db_user",$dbUser,$configStr1);           //初始化数据库用户名
             $configStr1 = str_replace("db_pwd",$dbPwd,$configStr1);         //初始化数据库密码
             $configStr1 = str_replace("db_prefix",$dbPrefix,$configStr1);           //初始化数据库表前缀
-
+ 
             $fp = fopen("../Public/Conf/config.php","w");
             fwrite($fp,$configStr1);
             fclose($fp);
@@ -162,7 +163,7 @@ switch ($step) {
               执行SQL语句
              */
             $counts = count($sqlFormat);
-			
+		
             for ($i = 0; $i < $counts; $i++) {
                 $sql = trim($sqlFormat[$i]);
 
@@ -176,9 +177,9 @@ switch ($step) {
             }
             
             //插入管理员
-            $time = date('Y/m/d H:i:s');
+           
             $dbPrefixadmin = $dbPrefix.'admin';
-            $query = "INSERT INTO `$dbPrefixadmin` (`id`, `username`, `password`, `time`) VALUES (1, \"$username\", \"$password\", \"$time\")";
+            $query = "INSERT INTO `$dbPrefixadmin` (`id`, `username`, `password`) VALUES (1, \"$username\", \"$password\")";
             mysql_query($query);
         }
 
