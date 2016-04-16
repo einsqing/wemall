@@ -1,7 +1,7 @@
 wemall
 wemall微信商城
 
-wemall微信商城地址是http://www.inuoer.com。
+wemall微信商城地址是http://www.wemallshop.com。
 适用于小企业电子商务，例如微信水果，微信蔬菜，微信外卖，微信超市等等功能。
 
 1、快速创建微信商城；
