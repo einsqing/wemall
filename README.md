@@ -1,6 +1,18 @@
 wemall
 wemall微信商城
 
+
+
+### 特色
+
+1.支持微信小程序
+
+2.支持订阅号，服务号和企业号
+
+3.适合学习和研究
+
+
+
 wemall微信商城地址是http://www.wemallshop.com。
 适用于小企业电子商务，例如微信水果，微信蔬菜，微信外卖，微信超市等等功能。
 
@@ -19,7 +31,21 @@ wemall微信商城地址是http://www.wemallshop.com。
 5、全网高速访问；
 借助公司的CDN骨干网，全网高速访问您的微信商城，畅享飞速体验。
 
-体验请搜索官方微信号:myinuoer 如需更多帮助请加QQ群:203118526
+体验请搜索官方微信号:myinuoer
+
+
+
+### 官网
+
+www.wemallshop.com
+
+### 论坛
+
+http://bbs.wemallshop.com
+
+
+
+[![image](http://www.koahub.com/public/ad.jpg "koahub软件市场")](http://www.koahub.com)
 
 -------------------------------------------------------------
 

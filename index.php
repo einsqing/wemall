@@ -16,8 +16,8 @@ if(version_compare(PHP_VERSION,'5.3.0','<'))  die('require PHP > 5.3.0 !');
 
 // 开启调试模式 建议开发阶段开启 部署阶段注释或者设为false
 define('APP_DEBUG',True);
-define('APP_VERSION', '2.0.0');
-define('APP_VERSION_TIME', '2016.1.1');
+define('APP_VERSION', '3.5.0');
+define('APP_VERSION_TIME', '2016.10.15');
 // 定义应用目录
 define('APP_PATH','./Application/');
 define('PUBLIC_PATH', './Public/');
@@ -30,6 +30,7 @@ if (!file_exists('./Install/install.lock')) {
     exit ();
 }
 
+include "vendor/autoload.php";
 // 引入ThinkPHP入口文件
 require './ThinkPHP/ThinkPHP.php';
 
