@@ -1,129 +1,289 @@
-ThinkPHP 5.0
+WeMall 7.0 (不含商城)
 ===============
 
-[![Total Downloads](https://poser.pugx.org/topthink/think/downloads)](https://packagist.org/packages/topthink/think)
-[![Latest Stable Version](https://poser.pugx.org/topthink/think/v/stable)](https://packagist.org/packages/topthink/think)
-[![Latest Unstable Version](https://poser.pugx.org/topthink/think/v/unstable)](https://packagist.org/packages/topthink/think)
-[![License](https://poser.pugx.org/topthink/think/license)](https://packagist.org/packages/topthink/think)
 
-ThinkPHP5在保持快速开发和大道至简的核心理念不变的同时，PHP版本要求提升到5.4，对已有的CBD模式做了更深的强化，优化核心，减少依赖，基于全新的架构思想和命名空间实现，是ThinkPHP突破原有框架思路的颠覆之作，其主要特性包括：
 
- + 基于命名空间和众多PHP新特性
- + 核心功能组件化
- + 强化路由功能
- + 更灵活的控制器
- + 重构的模型和数据库类
- + 配置文件可分离
- + 重写的自动验证和完成
- + 简化扩展机制
- + API支持完善
- + 改进的Log类
- + 命令行访问支持
- + REST支持
- + 引导文件支持
- + 方便的自动生成定义
- + 真正惰性加载
- + 分布式环境支持
- + 更多的社交类库
+​	wemall7.0 开源系统，基于thinkphp5开发，支持composer，优化核心，减少依赖，基于全新的架构思想和命名空间。
+
+
+
+### thinkphp5.0特性
+
+- 基于命名空间和众多PHP新特性
+- 核心功能组件化
+- 强化路由功能
+- 更灵活的控制器
+- 重构的模型和数据库类
+- 配置文件可分离
+- 重写的自动验证和完成
+- 简化扩展机制
+- API支持完善
+- 改进的Log类
+- 命令行访问支持
+- REST支持
+- 引导文件支持
+- 方便的自动生成定义
+- 真正惰性加载
+- 分布式环境支持
+- 更多的社交类库
 
 > ThinkPHP5的运行环境要求PHP5.4以上。
 
-详细开发文档参考 [ThinkPHP5完全开发手册](http://www.kancloud.cn/manual/thinkphp5)
 
-## 目录结构
 
-初始的目录结构如下：
+### wemall7.0特性
 
-~~~
-www  WEB部署目录（或者子目录）
-├─application           应用目录
-│  ├─common             公共模块目录（可以更改）
-│  ├─module_name        模块目录
-│  │  ├─config.php      模块配置文件
-│  │  ├─common.php      模块函数文件
-│  │  ├─controller      控制器目录
-│  │  ├─model           模型目录
-│  │  ├─view            视图目录
-│  │  └─ ...            更多类库目录
-│  │
-│  ├─command.php        命令行工具配置文件
-│  ├─common.php         公共函数文件
-│  ├─config.php         公共配置文件
-│  ├─route.php          路由配置文件
-│  ├─tags.php           应用行为扩展定义文件
-│  └─database.php       数据库配置文件
-│
-├─public                WEB目录（对外访问目录）
-│  ├─index.php          入口文件
-│  ├─router.php         快速测试文件
-│  └─.htaccess          用于apache的重写
-│
-├─thinkphp              框架系统目录
-│  ├─lang               语言文件目录
-│  ├─library            框架类库目录
-│  │  ├─think           Think类库包目录
-│  │  └─traits          系统Trait目录
-│  │
-│  ├─tpl                系统模板目录
-│  ├─base.php           基础定义文件
-│  ├─console.php        控制台入口文件
-│  ├─convention.php     框架惯例配置文件
-│  ├─helper.php         助手函数文件
-│  ├─phpunit.xml        phpunit配置文件
-│  └─start.php          框架入口文件
-│
-├─extend                扩展类库目录
-├─runtime               应用的运行时目录（可写，可定制）
-├─vendor                第三方类库目录（Composer依赖库）
-├─build.php             自动生成定义文件（参考）
-├─composer.json         composer 定义文件
-├─LICENSE.txt           授权说明文件
-├─README.md             README 文件
-├─think                 命令行入口文件
-~~~
+- 基于TP5，性能优越
+- 前后分离，简单方便
+- 插件扩展，功能丰富
+- 钩子机制，高度扩展
+- 自动升级，维护简单
+- 使用PJAX，体验提升
+- REST架构，耦合度低
 
-> router.php用于php自带webserver支持，可用于快速测试
-> 切换到public目录后，启动命令：php -S localhost:8888  router.php
-> 上面的目录结构和名称是可以改变的，这取决于你的入口文件和配置参数。
 
-## 命名规范
 
-`ThinkPHP5`遵循PSR-2命名规范和PSR-4自动加载规范，并且注意如下规范：
+## 插件钩子机制
 
-### 目录和文件
+### 安装
 
-*   目录不强制规范，驼峰和小写+下划线模式均支持；
-*   类库、函数文件统一以`.php`为后缀；
-*   类的文件名均以命名空间定义，并且命名空间的路径和类库文件所在路径一致；
-*   类名和类文件名保持一致，统一采用驼峰法命名（首字母大写）；
+> composer require qingyuexi/think-addons
 
-### 函数和类、属性命名
-*   类的命名采用驼峰法，并且首字母大写，例如 `User`、`UserType`，默认不需要添加后缀，例如`UserController`应该直接命名为`User`；
-*   函数的命名使用小写字母和下划线（小写字母开头）的方式，例如 `get_client_ip`；
-*   方法的命名使用驼峰法，并且首字母小写，例如 `getUserName`；
-*   属性的命名使用驼峰法，并且首字母小写，例如 `tableName`、`instance`；
-*   以双下划线“__”打头的函数或方法作为魔法方法，例如 `__call` 和 `__autoload`；
+### 配置
 
-### 常量和配置
-*   常量以大写字母和下划线命名，例如 `APP_PATH`和 `THINK_PATH`；
-*   配置参数以小写字母和下划线命名，例如 `url_route_on` 和`url_convert`；
+#### 公共配置
 
-### 数据表和字段
-*   数据表和字段采用小写加下划线方式命名，并注意字段名不要以下划线开头，例如 `think_user` 表和 `user_name`字段，不建议使用驼峰和中文作为数据表字段命名。
+```
+'addons'=>[
+    // 可以定义多个钩子
+    'testhook'=>'putong\demo\demo' // 键为钩子名称，用于在业务中自定义钩子处理，值为实现该钩子的插件，
+                    // 多个插件可以用数组也可以用逗号分割
+]
 
-## 参与开发
-请参阅 [ThinkPHP5 核心框架包](https://github.com/top-think/framework)。
+```
+
+或者在application\extra目录中新建`addons.php`,内容为：
+
+```
+<?php
+return [
+    // 可以定义多个钩子
+    'testhook'=>'putong\demo\demo' // 键为钩子名称，用于在业务中自定义钩子处理，值为实现该钩子的插件，
+                    // 多个插件可以用数组也可以用逗号分割
+]
+
+```
+
+### 创建插件
+
+> 创建的插件可以在view视图中使用，也可以在php业务中使用
+
+安装完成后访问系统时会在项目根目录生成名为`addons`的目录，在该目录中创建需要的插件。
+
+下面写一个例子：
+
+#### 创建putong分类插件
+
+> 在addons目录中创建putong目录
+
+#### 创建插件分类配置文件
+
+> 在putong目录中创建config.php类文件，插件配置文件可以省略。
+
+```
+<?php
+return [
+    'name' => 'putong',
+    'title' => 'putong',
+    'description' => 'putong类插件',
+    'status' => 1,
+    'author' => '清月曦'
+];
+
+```
+
+#### 在putong分类下创建demo插件
+
+> 在addons目录下的putong目录下创建demo目录
+
+#### 创建钩子实现类
+
+> 在test目录中创建Demo.php类文件。注意：类文件首字母需大写
+
+```
+<?php
+namespace addons\putong\demo;   // 注意命名空间规范
+
+use think\Addons;
+
+/**
+ * 插件测试
+ * @author byron sampson
+ */
+class Demo extends Addons   // 需继承think\addons\Addons类
+{
+    // 该插件的基础信息
+    public $info = [
+        'name' => 'test',   // 插件标识
+        'title' => '插件测试',  // 插件名称
+        'description' => 'thinkph5插件测试',    // 插件简介
+        'status' => 0,  // 状态
+        'author' => 'byron sampson',
+        'version' => '0.1'
+    ];
+
+    /**
+     * 插件安装方法
+     * @return bool
+     */
+    public function install()
+    {
+        return true;
+    }
+
+    /**
+     * 插件卸载方法
+     * @return bool
+     */
+    public function uninstall()
+    {
+        return true;
+    }
+
+    /**
+     * 实现的testhook钩子方法
+     * @return mixed
+     */
+    public function testhook($param)
+    {
+        // 调用钩子时候的参数信息
+        print_r($param);
+        // 当前插件的配置信息，配置信息存在当前目录的config.php文件中，见下方
+        print_r($this->getConfig());
+        // 可以返回模板，模板文件默认读取的为插件目录中的文件。模板名不能为空！
+        return $this->fetch('info');
+    }
+
+}
+
+```
+
+#### 创建插件配置文件
+
+> 在test目录中创建config.php类文件，插件配置文件可以省略。
+
+```
+<?php
+return [
+    'name' => 'demo',
+    'title' => 'demo',
+    'description' => 'demo插件',
+    'status' => 1,
+    'url' => true,
+    'author' => '清月曦',
+    'version' => '0.1'
+];
+
+```
+
+#### 创建钩子模板文件
+
+> 在demo目录中创建info.html模板文件，钩子在使用fetch方法时对应的模板文件。
+
+```
+<h1>hello tpl</h1>
+
+如果插件中需要有链接或提交数据的业务，可以在插件中创建controller业务文件，
+要访问插件中的controller时使用addon_url生成url链接。
+如下：
+<a href="{:addon_url('putong://demo/admin/index')}">link demo</a>
+格式为：
+demo为插件名，admin为controller中的类名，index为controller中的方法
+
+```
+
+#### 创建插件的controller文件
+
+> 在test目录中创建controller目录，在controller目录中创建Action.php文件 controller类的用法与tp5中的controller一致
+
+```
+<?php
+namespace addons\putong\demo\controller;
+
+class Admin
+{
+    public function index()
+    {
+        echo 'hello link';
+    }
+}
+
+```
+
+> 如果需要使用view模板则需要继承`\think\addons\Controller`类 模板文件所在位置为插件目录的view中，规则与模块中的view规则一致
+
+```
+<?php
+namespace addons\putong\demo\controller;
+
+use think\addons\Controller;
+
+class Admin extends Controller
+{
+    public function index()
+    {
+        return $this->fetch();
+    }
+}
+
+```
+
+### 使用钩子
+
+> 创建好插件后就可以在正常业务中使用该插件中的钩子了 使用钩子的时候第二个参数可以省略
+
+#### 模板中使用钩子
+
+```
+<div>{:hook('testhook', ['id'=>1])}</div>
+
+```
+
+#### php业务中使用
+
+> 只要是thinkphp5正常流程中的任意位置均可以使用
+
+```
+hook('testhook', ['id'=>1])
+
+```
+
+### 插件目录结构
+
+#### 最终生成的目录结构为
+
+```
+tp5
+ - addons
+ -- putong
+ --- demo
+ ---- controller
+ ----- Admin.php
+ ---- view
+ ---- action
+ ----- link.html
+ --- config.php
+ --- info.html
+ --- Demo.php
+ - application
+ - thinkphp
+ - extend
+ - vendor
+ - public
+```
+
+
 
 ## 版权信息
 
-ThinkPHP遵循Apache2开源协议发布，并提供免费使用。
-
-本项目包含的第三方源码和二进制文件之版权信息另行标注。
-
-版权所有Copyright © 2006-2016 by ThinkPHP (http://thinkphp.cn)
-
-All rights reserved。
-
-ThinkPHP® 商标和著作权所有者为上海顶想信息科技有限公司。
-
-更多细节参阅 [LICENSE.txt](LICENSE.txt)
+wemall7开源版遵循Apache2开源协议发布，并提供免费使用。本项目包含的第三方源码和二进制文件之版权信息另行标注。版权所有Copyright © 2016-2017 by wemallshop.com ([http://www.wemallshop.com](http://www.wemallshop.com)) All rights reserved。
