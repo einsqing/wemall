@@ -1,0 +1,98 @@
+<!-- Main content -->
+<section class="content">
+    <div class="row">
+        <!-- /.col -->
+        <div class="col-md-12">
+            <div class="box box-default">
+                <div class="box-header with-border">
+                    <h3 class="box-title">短信模版管理</h3>
+                    <!-- /.box-tools -->
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body no-padding">
+                    <div class="mailbox-controls">
+                        <!-- <div class="btn-group">
+                            <a href="{:url('/admin/tpl/sms/add')}" class="btn btn-danger ">
+                                新增短信模版
+                            </a>
+                        </div> -->
+                    </div>
+                    <div class="table-responsive" style="overflow-x: visible;">
+                        <table class="table table-bordered table-hover">
+                            <tbody>
+                            <tr>
+                                <th>
+                                    <label><input onchange="checkAll()" type="checkbox" value=""></label>
+                                </th>
+                                <th>编号</th>
+                                <th>模版类型</th>
+                                <th>模版ID</th>
+                                <th>模版内容</th>
+                                <th>测试号码</th>
+                                <th>状态</th>
+                                <th>操作</th>
+                            </tr>
+                            {volist name="smslist" id="sms"}
+                            <tr>
+                                <td>
+                                    <label><input name="checkbox" class="check" type="checkbox" value="{$sms.id}"></label>
+                                </td>
+                                <td>{$sms.id}</td>
+                                <td>{$sms.name}</td>
+                                <td>{$sms.template_code}</td>
+                                <td>{$sms.content}</td>
+                                <td>{$sms.phone}</td>
+                                <td>
+                                    {eq name="sms.status" value="1"}
+                                        <span class="label label-success">开启</span> 
+                                    {else/}
+                                        <span class="label label-default">关闭</span> 
+                                    {/eq} 
+                                </td>
+                                <td class="table-action">
+                                    <a href="{:url('/admin/tpl/sms/add',array('id'=>$sms['id']))}">编辑</a>
+                                    {eq name="sms.status" value="0"}
+                                    <a href="{:url('/admin/tpl/sms/update',array('id'=>$sms['id'],'status'=>1))}">开启</a> 
+                                    {else}
+                                    <a href="{:url('/admin/tpl/sms/update',array('id'=>$sms['id'],'status'=>0))}">关闭</a> 
+                                    {/eq}
+                                    <a href="{:url('/admin/tpl/sms/send',array('id'=>$sms['id']))}">发一条测试</a>
+                                </td>
+                            </tr>
+                            {/volist}
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- /.sms-box-messages -->
+                </div>
+                <!-- /.box-body -->
+                <div class="box-footer no-padding">
+                    <div class="mailbox-controls">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-danger"
+                                    onclick="batchUrl('{:url(\'/admin/tpl/sms/update\',array(\'status\'=>1))}')">
+                                开启
+                            </button>
+                        </div>
+                        <div class="btn-group">
+                        	<button type="button" class="btn btn-danger"
+                                    onclick="batchUrl('{:url(\'/admin/tpl/sms/update\',array(\'status\'=>0))}')">
+                                关闭
+                            </button>
+                        </div>
+                        <div class="btn-group pull-right">
+                            {$smslist->render()}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /. box -->
+        </div>
+        <!-- /.col -->
+    </div>
+</section>
+<script type="text/javascript">
+
+
+</script>
+

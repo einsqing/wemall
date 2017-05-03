@@ -1,0 +1,119 @@
+
+<!-- Main content -->
+<section class="content">
+    <div class="row">
+        <div class="col-md-12">
+            <!-- general form elements -->
+            <div class="box box-default">
+                <div class="box-header with-border">
+                    <h3 class="box-title">新增微信菜单</h3>
+                </div>
+                <!-- form start -->
+                <form class="form-horizontal layui-form" action="{:url('/admin/wx/menu/add')}" method="post">
+                    <div class="box-body">
+                        <input class="form-control" name="id" placeholder="" value="{$menu.id|default=''}"
+                               type="hidden">
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">上级菜单</label>
+
+                            <div class="col-sm-10">
+                                <select name="pid" class="form-control">
+                                    <option value="0">一级菜单</option>
+                                    {volist name="parentmenu" id="parentmenu"}
+                                        <option value="{$parentmenu.id}" {eq name="parentmenu.id" value="$menu.pid|default=''" }selected{/eq}>{$parentmenu.name}</option>
+                                    {/volist}
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">菜单名称</label>
+
+                            <div class="col-sm-10">
+                                <input class="form-control" name="name" placeholder="" value="{$menu.name|default=''}"
+                                       type="text">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">类型</label>
+
+                            <div class="col-sm-10">
+                                <input type="radio" name="type" value="click" lay-filter="type" title="模拟关键字"
+                                {eq name="menu.type|default='click'" value="click"}checked{/eq}>
+                                <input type="radio" name="type" value="view" lay-filter="type" title="链接" 
+                                {eq name="menu.type|default=''" value="view"}checked{/eq}>
+                            </div>
+                        </div>
+
+                        <div class="form-group click" {neq name="menu.type|default='click'" value="click"}style="display: none;"{/neq}>
+                            <label class="col-sm-2 control-label">关键词</label>
+
+                            <div class="col-sm-10">
+                                <input class="form-control" name="key" placeholder="" value="{$menu.key|default=''}"
+                                       type="text">
+                            </div>
+                        </div>
+
+                        <div class="form-group view" {neq name="menu.type|default=''" value="view"}style="display: none;"{/neq}>
+                            <label class="col-sm-2 control-label">url</label>
+
+                            <div class="col-sm-10">
+                                <input class="form-control" name="url" placeholder="" value="{$menu.url|default=''}"
+                                       type="text">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">排序</label>
+
+                            <div class="col-sm-10">
+                                <input class="form-control" name="rank" placeholder="" value="{$menu.rank|default=''}"
+                                       type="text">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">备注</label>
+
+                            <div class="col-sm-10">
+                                <input class="form-control" name="remark" placeholder="" value="{$menu.remark|default=''}"
+                                       type="text">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.box-body -->
+
+                    <div class="box-footer">
+                        <div class="col-sm-2">
+                            <button type="submit" class="btn btn-block btn-danger">保存</button>
+                        </div>
+
+                        <div class="col-sm-2">
+                            <button type="button" class="btn btn-block btn-default" onclick="history.go(-1)">取消</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <!-- /.box -->
+        </div>
+        <!--/.col (right) -->
+    </div>
+</section>
+<script type="text/javascript">
+    $(function () {
+        layui.use('form', function() {
+            var form = layui.form();
+            form.render(); //更新全部
+            form.on('radio(type)', function(data){
+                if (data.value == "view") {
+                    $('.view').show();
+                    $('.click').hide();
+                } else {
+                    $('.view').hide();
+                    $('.click').show();
+                }
+            }); 
+        });
+    });
+</script>

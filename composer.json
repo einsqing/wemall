@@ -20,7 +20,9 @@
         "topthink/framework": "^5.0",
         "topthink/think-captcha": "^1.0",
         "qingyuexi/think-addons": "^1.0",
-        "phpoffice/phpexcel": "^1.8"
+        "phpoffice/phpexcel": "^1.8",
+        "phpmailer/phpmailer": "^5.2",
+        "flc/alidayu": "^2.0"
     },
     "extra": {
         "think-path": "thinkphp"

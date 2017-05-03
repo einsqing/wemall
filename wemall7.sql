@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost:3306
--- Generation Time: 2017-05-02 11:37:04
+-- Generation Time: 2017-05-03 18:54:08
 -- 服务器版本： 5.5.42
 -- PHP Version: 5.5.26
 
@@ -64,8 +64,33 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`id`, `group_id`, `username`, `password`, `email`, `mobile`, `reg_ip`, `last_login_time`, `last_login_ip`, `status`, `remark`, `created_at`, `updated_at`) VALUES
-(1, 1, 'admin', '21232f297a57a5a743894a0e4a801fc3', '296720094@qq.com', '18053449656', '0', '2017-05-01 10:05:31', '0.0.0.0', 1, '1', '0000-00-00 00:00:00', '2017-05-01 10:05:31'),
+(1, 1, 'admin', '21232f297a57a5a743894a0e4a801fc3', '296720094@qq.com', '18053449656', '0', '2017-05-03 07:58:17', '0.0.0.0', 1, '1', '0000-00-00 00:00:00', '2017-05-03 07:58:17'),
 (2, 2, '1', 'c4ca4238a0b923820dcc509a6f75849b', '1604583867@qq.com', '18538753627', '0', '2017-05-01 10:03:14', '0.0.0.0', 1, '1', '2017-05-01 09:47:46', '2017-05-01 10:03:14');
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `analysis`
+--
+
+CREATE TABLE `analysis` (
+  `id` int(10) unsigned NOT NULL,
+  `orders` int(11) NOT NULL,
+  `trades` float NOT NULL,
+  `registers` int(11) NOT NULL,
+  `users` int(11) NOT NULL COMMENT '当天购买人数',
+  `date` text,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+
+--
+-- 转存表中的数据 `analysis`
+--
+
+INSERT INTO `analysis` (`id`, `orders`, `trades`, `registers`, `users`, `date`, `created_at`, `updated_at`) VALUES
+(1, 0, 0, 1, 0, '2017-05-01', '2017-04-30 23:22:28', NULL),
+(2, 0, 0, 1, 0, '2017-05-02', '2017-05-01 21:21:32', NULL);
 
 -- --------------------------------------------------------
 
@@ -181,7 +206,7 @@ CREATE TABLE `auth_rule` (
   `condition` char(100) DEFAULT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
-) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=50 DEFAULT CHARSET=utf8;
 
 --
 -- 转存表中的数据 `auth_rule`
@@ -213,7 +238,30 @@ INSERT INTO `auth_rule` (`id`, `name`, `title`, `type`, `rank`, `status`, `condi
 (23, 'admin/article.index/index', '文章列表', 1, 0, 1, NULL, '2017-05-01 13:25:27', '0000-00-00 00:00:00'),
 (24, 'admin/article.index/add', '新增修改文章', 1, 0, 1, NULL, '2017-05-01 13:26:03', '0000-00-00 00:00:00'),
 (25, 'admin/article.index/update', '更新文章状态', 1, 0, 1, NULL, '2017-05-01 13:26:24', '0000-00-00 00:00:00'),
-(26, 'admin/config.site/index', '站点设置', 1, 0, 1, NULL, '2017-05-02 02:45:54', '0000-00-00 00:00:00');
+(26, 'admin/config.site/index', '站点设置', 1, 0, 1, NULL, '2017-05-02 02:45:54', '0000-00-00 00:00:00'),
+(27, 'admin/wx.config/index', '微信配置', 1, 0, 1, NULL, '2017-05-03 08:02:56', '0000-00-00 00:00:00'),
+(28, 'admin/wx.menu/index', '微信菜单设置', 1, 0, 1, NULL, '2017-05-03 09:02:06', '0000-00-00 00:00:00'),
+(29, 'admin/wx.menu/add', '新增修改微信菜单', 1, 0, 1, NULL, '2017-05-03 09:02:32', '0000-00-00 00:00:00'),
+(30, 'admin/wx.menu/del', '删除微信菜单', 1, 0, 1, NULL, '2017-05-03 09:03:02', '0000-00-00 00:00:00'),
+(31, 'admin/wx.reply/index', '微信自定义回复设置', 1, 0, 1, NULL, '2017-05-03 09:03:37', '0000-00-00 00:00:00'),
+(32, 'admin/wx.reply/add', '新增修改微信自定义回复', 1, 0, 1, NULL, '2017-05-03 09:04:13', '0000-00-00 00:00:00'),
+(33, 'admin/wx.reply/del', '删除微信自定义回复', 1, 0, 1, NULL, '2017-05-03 09:04:52', '0000-00-00 00:00:00'),
+(34, 'admin/wx.tplmsg/index', '模版消息列表', 1, 0, 1, NULL, '2017-05-03 09:06:01', '0000-00-00 00:00:00'),
+(35, 'admin/wx.tplmsg/add', '新增修改模版消息', 1, 0, 1, NULL, '2017-05-03 09:06:25', '0000-00-00 00:00:00'),
+(36, 'admin/wx.tplmsg/update', '开启关闭模版消息', 1, 0, 1, NULL, '2017-05-03 09:06:51', '0000-00-00 00:00:00'),
+(37, 'admin/wx.kefu/index', '多客服设置', 1, 0, 1, NULL, '2017-05-03 09:07:38', '0000-00-00 00:00:00'),
+(38, 'admin/wx.print/index', '微信打印机设置', 1, 0, 1, NULL, '2017-05-03 09:08:02', '0000-00-00 00:00:00'),
+(39, 'admin/tpl.shop/index', '模版设置', 1, 0, 1, NULL, '2017-05-03 09:11:42', '0000-00-00 00:00:00'),
+(40, 'admin/tpl.mail/index', '邮件模版列表', 1, 0, 1, NULL, '2017-05-03 09:14:42', '0000-00-00 00:00:00'),
+(41, 'admin/tpl.mail/add', '新增修改邮件模版', 1, 0, 1, NULL, '2017-05-03 09:15:03', '0000-00-00 00:00:00'),
+(42, 'admin/tpl.mail/update', '更新邮件模版状态', 1, 0, 1, NULL, '2017-05-03 09:15:27', '0000-00-00 00:00:00'),
+(43, 'admin/tpl.mail/send', '测试邮件模版', 1, 0, 1, NULL, '2017-05-03 09:18:28', '0000-00-00 00:00:00'),
+(44, 'admin/tpl.sms/index', '短信模版列表', 1, 0, 1, NULL, '2017-05-03 09:18:55', '0000-00-00 00:00:00'),
+(45, 'admin/tpl.sms/add', '编辑短信模版', 1, 0, 1, NULL, '2017-05-03 09:20:38', '0000-00-00 00:00:00'),
+(46, 'admin/tpl.sms/update', '开启关闭短信模版', 1, 0, 1, NULL, '2017-05-03 09:21:15', '0000-00-00 00:00:00'),
+(47, 'admin/tpl.sms/send', '短信模版测试发送', 1, 0, 1, NULL, '2017-05-03 09:21:41', '0000-00-00 00:00:00'),
+(48, 'admin/config.sms/index', '短信配置', 1, 0, 1, NULL, '2017-05-03 09:25:38', '0000-00-00 00:00:00'),
+(49, 'admin/config.mail/index', '邮件配置', 1, 0, 1, NULL, '2017-05-03 09:26:19', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -228,6 +276,7 @@ CREATE TABLE `config` (
   `logo_id` int(11) NOT NULL COMMENT 'Logo',
   `description` text NOT NULL COMMENT '描述',
   `copyright` text NOT NULL COMMENT '版权',
+  `theme` text NOT NULL COMMENT '模版',
   `tongji_code` text COMMENT '统计代码',
   `created_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` timestamp NULL DEFAULT '0000-00-00 00:00:00'
@@ -237,8 +286,8 @@ CREATE TABLE `config` (
 -- 转存表中的数据 `config`
 --
 
-INSERT INTO `config` (`id`, `title`, `keywords`, `logo_id`, `description`, `copyright`, `tongji_code`, `created_at`, `updated_at`) VALUES
-(1, '单用户微商城', 'wemall', 1, '111111', 'Copyright © 2015 wemallshop.com All Rights Reserved 豫ICP备16009619号', '1111121', '2017-01-10 13:30:26', '2017-05-02 03:31:49');
+INSERT INTO `config` (`id`, `title`, `keywords`, `logo_id`, `description`, `copyright`, `theme`, `tongji_code`, `created_at`, `updated_at`) VALUES
+(1, '单用户微商城', 'wemall', 1, '111111', 'Copyright © 2015 wemallshop.com All Rights Reserved 豫ICP备16009619号', 'default', '1111121', '2017-01-10 13:30:26', '2017-05-03 10:33:25');
 
 -- --------------------------------------------------------
 
@@ -262,6 +311,102 @@ CREATE TABLE `file` (
 
 INSERT INTO `file` (`id`, `name`, `ext`, `type`, `savename`, `savepath`, `time`) VALUES
 (1, 'U4530P18DT20110710182825.jpg', '', 'image/jpeg', '8245f8334edabfa0bd90e8b9ab116093.jpg', '20170501/', '2017-05-01 11:10:01');
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `mail`
+--
+
+CREATE TABLE `mail` (
+  `id` int(11) unsigned NOT NULL,
+  `host` text NOT NULL COMMENT '服务器地址',
+  `port` int(11) NOT NULL COMMENT '服务器端口',
+  `secure` double NOT NULL COMMENT '1:加密0:不加密',
+  `replyTo` text NOT NULL COMMENT '回信地址',
+  `user` text NOT NULL COMMENT '发送邮箱',
+  `pass` text NOT NULL COMMENT '授权码,通过QQ获取',
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+--
+-- 转存表中的数据 `mail`
+--
+
+INSERT INTO `mail` (`id`, `host`, `port`, `secure`, `replyTo`, `user`, `pass`, `created_at`, `updated_at`) VALUES
+(1, 'smtpdm.aliyun.com', 465, 1, 'koahub@163.com', '1', '1', '2017-02-16 01:52:41', '2017-05-03 10:33:38');
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `mail_tpl`
+--
+
+CREATE TABLE `mail_tpl` (
+  `id` int(11) unsigned NOT NULL,
+  `type` text NOT NULL COMMENT '类型',
+  `name` text NOT NULL COMMENT '模版名',
+  `content` text NOT NULL COMMENT '内容',
+  `status` int(11) NOT NULL DEFAULT '1' COMMENT '状态1:开启0:关闭',
+  `mail` text NOT NULL COMMENT '测试发送邮箱',
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+--
+-- 转存表中的数据 `mail_tpl`
+--
+
+INSERT INTO `mail_tpl` (`id`, `type`, `name`, `content`, `status`, `mail`, `created_at`, `updated_at`) VALUES
+(1, 'register', '注册模版', '<p>您好，欢迎您注册wemallshop微信商城，您的验证码是：$code</p>', 1, '1604583867@qq.com', '0000-00-00 00:00:00', '2017-02-18 09:38:44');
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `sms`
+--
+
+CREATE TABLE `sms` (
+  `id` int(10) unsigned NOT NULL,
+  `app_key` text NOT NULL,
+  `app_secret` text NOT NULL,
+  `sign` text NOT NULL COMMENT '短信签名',
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+--
+-- 转存表中的数据 `sms`
+--
+
+INSERT INTO `sms` (`id`, `app_key`, `app_secret`, `sign`, `created_at`, `updated_at`) VALUES
+(1, '23643041', '17f711feb8fd1a0f3c376d4eaaa2710b', 'tp商城', '2016-07-19 09:38:40', '2017-05-03 10:33:31');
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `sms_tpl`
+--
+
+CREATE TABLE `sms_tpl` (
+  `id` int(11) unsigned NOT NULL,
+  `type` text NOT NULL COMMENT '类型',
+  `name` text NOT NULL COMMENT '模版名',
+  `template_code` text NOT NULL COMMENT '模版ID',
+  `content` text NOT NULL COMMENT '内容',
+  `status` int(11) NOT NULL DEFAULT '1' COMMENT '状态1:开启0:关闭',
+  `phone` text NOT NULL COMMENT '测试发送邮箱',
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+--
+-- 转存表中的数据 `sms_tpl`
+--
+
+INSERT INTO `sms_tpl` (`id`, `type`, `name`, `template_code`, `content`, `status`, `phone`, `created_at`, `updated_at`) VALUES
+(1, 'register', '短信验证码', 'SMS_47900069', '您的本次验证码${code}，10分钟内输入有效，感谢使用平台', 1, '15238027761', '0000-00-00 00:00:00', '2017-02-18 09:13:21');
 
 -- --------------------------------------------------------
 
@@ -294,8 +439,8 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `contact_id`, `avater_id`, `nickname`, `username`, `phone`, `password`, `token`, `money`, `score`, `status`, `buy_num`, `remark`, `last_login_ip`, `last_login_time`, `created_at`, `updated_at`) VALUES
-(1, 3, 78, NULL, 'wemall', '1', 'c4ca4238a0b923820dcc509a6f75849b', '', 2, 420, 1, 192, '1211', '192.168.0.120', '2017-03-08 03:17:11', '2016-07-26 02:14:20', '2017-05-01 12:38:32'),
-(2, 1, 1, '清月曦', '清月曦', '', '', NULL, 0, 0, 1, 0, '1', NULL, '0000-00-00 00:00:00', '2017-05-01 12:40:38', '2017-05-01 12:40:55');
+(1, 3, 78, NULL, 'wemall', '1', 'c4ca4238a0b923820dcc509a6f75849b', '', 2, 420, 1, 192, '1211', '192.168.0.120', '2017-05-02 03:17:11', '2017-05-01 02:14:20', '2017-05-01 12:38:32'),
+(2, 1, 1, '清月曦', '清月曦', '', '', NULL, 0, 0, 1, 0, '1', NULL, '2017-05-01 16:00:00', '2017-05-02 12:40:38', '2017-05-01 12:40:55');
 
 -- --------------------------------------------------------
 
@@ -322,6 +467,163 @@ INSERT INTO `user_level` (`id`, `name`, `score`, `created_at`, `updated_at`) VAL
 (4, '铂金会员', 500, '2017-01-05 23:05:46', '2017-02-15 10:37:53'),
 (5, '黄金会员', 1000, '2017-03-02 07:12:29', '2017-05-01 12:56:15');
 
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `wx_config`
+--
+
+CREATE TABLE `wx_config` (
+  `id` int(5) NOT NULL,
+  `token` text NOT NULL,
+  `appid` text NOT NULL,
+  `appsecret` text NOT NULL,
+  `encodingaeskey` text NOT NULL,
+  `x_appid` text NOT NULL COMMENT '小程序',
+  `x_appsecret` text NOT NULL COMMENT '小程序',
+  `old_id` text NOT NULL COMMENT '原始id',
+  `switch` int(11) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+--
+-- 转存表中的数据 `wx_config`
+--
+
+INSERT INTO `wx_config` (`id`, `token`, `appid`, `appsecret`, `encodingaeskey`, `x_appid`, `x_appsecret`, `old_id`, `switch`, `created_at`, `updated_at`) VALUES
+(1, 'wemall', 'wx6d040141df50d2113', '523c93731918e84766114ca8f73133824', 'vkG6JOKy7f2f1nejqJalOJkjJEK5JJlNaJjjSQ6Q2gM', 'wx5f1a51823b8371ae8', '8e157d2823fb72dcb17f9762308b8333', 'gh_6f79b1a839f1', 1, '2016-01-05 02:16:16', '2017-05-03 10:33:43');
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `wx_kefu`
+--
+
+CREATE TABLE `wx_kefu` (
+  `id` int(5) NOT NULL,
+  `status` int(11) NOT NULL,
+  `kefu` text NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+--
+-- 转存表中的数据 `wx_kefu`
+--
+
+INSERT INTO `wx_kefu` (`id`, `status`, `kefu`, `created_at`, `updated_at`) VALUES
+(1, 1, 'biyuehun', '0000-00-00 00:00:00', '2017-05-03 10:34:06');
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `wx_menu`
+--
+
+CREATE TABLE `wx_menu` (
+  `id` int(5) NOT NULL,
+  `pid` int(5) NOT NULL DEFAULT '0',
+  `type` text,
+  `name` text NOT NULL,
+  `key` text NOT NULL,
+  `url` text NOT NULL,
+  `rank` text NOT NULL,
+  `status` tinyint(1) NOT NULL,
+  `remark` text,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+
+--
+-- 转存表中的数据 `wx_menu`
+--
+
+INSERT INTO `wx_menu` (`id`, `pid`, `type`, `name`, `key`, `url`, `rank`, `status`, `remark`, `created_at`, `updated_at`) VALUES
+(1, 0, 'view', '商业版', '111', 'http://www.wemallshop.com/wemall/index.php/App/Index/index', '1', 0, '2', '2016-02-18 06:46:22', '2017-01-11 10:28:43'),
+(2, 1, 'view', '分销版', '', 'http://www.wemallshop.com/wfx/App/Shop/index', '4', 0, '1213', '2015-11-06 09:25:28', '2017-02-16 10:17:00'),
+(3, 0, 'click', 'QQ客服', 'qqkf', '', '3', 0, '2034210985', '2015-12-31 08:19:22', '2017-05-03 09:03:10');
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `wx_print`
+--
+
+CREATE TABLE `wx_print` (
+  `id` int(11) NOT NULL,
+  `apikey` varchar(100) DEFAULT NULL COMMENT 'apikey',
+  `mkey` varchar(100) DEFAULT NULL COMMENT '秘钥',
+  `partner` varchar(100) DEFAULT NULL COMMENT '用户id',
+  `machine_code` varchar(100) DEFAULT NULL COMMENT '机器码',
+  `switch` int(11) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+--
+-- 转存表中的数据 `wx_print`
+--
+
+INSERT INTO `wx_print` (`id`, `apikey`, `mkey`, `partner`, `machine_code`, `switch`, `created_at`, `updated_at`) VALUES
+(1, '61', '31', '16', '16', 0, '2016-08-07 11:49:22', '2017-05-03 10:34:09');
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `wx_reply`
+--
+
+CREATE TABLE `wx_reply` (
+  `id` int(10) unsigned NOT NULL,
+  `type` text NOT NULL,
+  `title` text NOT NULL,
+  `description` text NOT NULL,
+  `file_id` int(11) NOT NULL,
+  `url` text NOT NULL,
+  `key` text NOT NULL,
+  `remark` text,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+
+--
+-- 转存表中的数据 `wx_reply`
+--
+
+INSERT INTO `wx_reply` (`id`, `type`, `title`, `description`, `file_id`, `url`, `key`, `remark`, `created_at`, `updated_at`) VALUES
+(1, 'news', '恭喜你加入WeMall，欢迎体验WeMall商业版，WeMall分销版和WeMall开源版。WeMall商业版更新，速度提升30%，致力于打造世界上最快，体验最好的微商城。客服QQ：2034210985', '1111', 29, '', 'subscribe', '1212', '2016-01-05 02:19:53', '2017-03-02 06:49:04'),
+(2, 'news', '欢迎来到商业版wemall商城', '欢迎来到商业版wemall商城11111', 103, 'http://www.wemallshop.com/3/App/Index/index', '商城', '', '2016-01-05 02:23:41', '2017-03-02 06:49:49'),
+(3, 'news', '2222222', '111', 103, '1111', '11111', '1111', '2017-01-12 09:27:57', '2017-03-02 06:49:41');
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `wx_tplmsg`
+--
+
+CREATE TABLE `wx_tplmsg` (
+  `id` int(10) unsigned NOT NULL,
+  `name` text NOT NULL,
+  `type` text NOT NULL,
+  `title` text NOT NULL,
+  `status` int(11) NOT NULL,
+  `remark` text NOT NULL,
+  `template_id_short` text NOT NULL,
+  `template_id` text NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+
+--
+-- 转存表中的数据 `wx_tplmsg`
+--
+
+INSERT INTO `wx_tplmsg` (`id`, `name`, `type`, `title`, `status`, `remark`, `template_id_short`, `template_id`, `created_at`, `updated_at`) VALUES
+(1, '订单提醒(新订单通知)', 'order', '尊敬的客户,您的订单已成功提交！', 1, '666', 'OPENTM201785396', '', '2016-08-07 11:50:16', '2017-01-12 23:07:32'),
+(2, '支付提醒(订单支付成功通知)', 'pay', '您已成功支付', 1, '3333', 'OPENTM207791277', '', '2016-08-07 11:50:16', '2017-01-12 23:07:35'),
+(3, '发货提醒(订单发货提醒)', 'delivery', '尊敬的客户,您的订单已发货！', 1, '33312', 'OPENTM207763419', '', '2016-08-07 11:50:16', '2017-02-16 11:04:46');
+
 --
 -- Indexes for dumped tables
 --
@@ -339,6 +641,12 @@ ALTER TABLE `admin`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `username` (`username`),
   ADD KEY `status` (`status`);
+
+--
+-- Indexes for table `analysis`
+--
+ALTER TABLE `analysis`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `article`
@@ -384,6 +692,30 @@ ALTER TABLE `file`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `mail`
+--
+ALTER TABLE `mail`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `mail_tpl`
+--
+ALTER TABLE `mail_tpl`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `sms`
+--
+ALTER TABLE `sms`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `sms_tpl`
+--
+ALTER TABLE `sms_tpl`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `user`
 --
 ALTER TABLE `user`
@@ -393,6 +725,42 @@ ALTER TABLE `user`
 -- Indexes for table `user_level`
 --
 ALTER TABLE `user_level`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `wx_config`
+--
+ALTER TABLE `wx_config`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `wx_kefu`
+--
+ALTER TABLE `wx_kefu`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `wx_menu`
+--
+ALTER TABLE `wx_menu`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `wx_print`
+--
+ALTER TABLE `wx_print`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `wx_reply`
+--
+ALTER TABLE `wx_reply`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `wx_tplmsg`
+--
+ALTER TABLE `wx_tplmsg`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -409,6 +777,11 @@ ALTER TABLE `addons_putong_demo_config`
 --
 ALTER TABLE `admin`
   MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '用户ID',AUTO_INCREMENT=3;
+--
+-- AUTO_INCREMENT for table `analysis`
+--
+ALTER TABLE `analysis`
+  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `article`
 --
@@ -433,7 +806,7 @@ ALTER TABLE `auth_group_access`
 -- AUTO_INCREMENT for table `auth_rule`
 --
 ALTER TABLE `auth_rule`
-  MODIFY `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=27;
+  MODIFY `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=50;
 --
 -- AUTO_INCREMENT for table `config`
 --
@@ -445,6 +818,26 @@ ALTER TABLE `config`
 ALTER TABLE `file`
   MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
+-- AUTO_INCREMENT for table `mail`
+--
+ALTER TABLE `mail`
+  MODIFY `id` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT for table `mail_tpl`
+--
+ALTER TABLE `mail_tpl`
+  MODIFY `id` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT for table `sms`
+--
+ALTER TABLE `sms`
+  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT for table `sms_tpl`
+--
+ALTER TABLE `sms_tpl`
+  MODIFY `id` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+--
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
@@ -454,3 +847,33 @@ ALTER TABLE `user`
 --
 ALTER TABLE `user_level`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
+--
+-- AUTO_INCREMENT for table `wx_config`
+--
+ALTER TABLE `wx_config`
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT for table `wx_kefu`
+--
+ALTER TABLE `wx_kefu`
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT for table `wx_menu`
+--
+ALTER TABLE `wx_menu`
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
+--
+-- AUTO_INCREMENT for table `wx_print`
+--
+ALTER TABLE `wx_print`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT for table `wx_reply`
+--
+ALTER TABLE `wx_reply`
+  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
+--
+-- AUTO_INCREMENT for table `wx_tplmsg`
+--
+ALTER TABLE `wx_tplmsg`
+  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;

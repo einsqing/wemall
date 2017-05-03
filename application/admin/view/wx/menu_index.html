@@ -1,0 +1,115 @@
+
+<!-- Main content -->
+<section class="content">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="callout callout-danger">
+                <p>关键词:qqkf 设置qq客服,备注设置qq号</p>
+            </div>
+
+            <div class="box box-default">
+                <div class="box-header with-border">
+                    <h3 class="box-title">微信菜单管理</h3>
+                </div>
+                <div class="box-body no-padding">
+                    <div class="mailbox-controls">
+                        <div class="btn-group">
+                            <a href="{:url('/admin/wx/menu/add')}" class="btn btn-danger ">
+                                新增菜单
+                            </a>
+                        </div>
+                    </div>
+                    <div class="table-responsive" style="overflow-x: visible;">
+                        <table class="table table-bordered table-hover">
+                            <tbody>
+                            <tr>
+                                <th class="hidden-xs">
+                                    <label><input onchange="checkAll()" type="checkbox" value=""></label>
+                                </th>
+                                <th>ID</th>
+                                <th>PID(上级)</th>
+                                <th>菜单名称</th>
+                                <th>类型</th>
+                                <th>URL</th>
+                                <th>关键词</th>
+                                <th>排序</th>
+                                <th>备注</th>
+                                <th>操作</th>
+                            </tr>
+                            {volist name="menulist" id="menu"}
+                                <tr>
+                                    <td class="hidden-xs">
+                                        <label><input name="checkbox" class="check" type="checkbox" value="{$menu.id}"></label>
+                                    </td>
+                                    <td>{$menu.id}</td>
+                                    <td>{$menu.pid}</td>
+                                    <td>{$menu.name}</td>
+                                    <td>
+                                        {eq name="menu.type|default=''" value="view"}链接{/eq} 
+                                        {eq name="menu.type|default=''" value="click"}模拟关键字{/eq} 
+                                    </td>
+                                    <td>
+                                        {eq name="menu.type|default=''" value="view"}
+                                            {$menu.url}
+                                        {/eq}  
+                                    </td>
+                                    <td>
+                                        {eq name="menu.type|default=''" value="click"}
+                                            {$menu.key}
+                                        {/eq}  
+                                    </td>
+                                    <td>{$menu.rank}</td>
+                                    <td>{$menu.remark}</td>
+                                    <td class="table-action">
+                                        <a href="{:url('/admin/wx/menu/add',array('id'=>$menu['id']))}">修改</a>
+                                        <a href="{:url('/admin/wx/menu/del',array('id'=>$menu['id']))}">删除</a>
+                                    </td>
+                                </tr>
+                                {volist name="menu.sub" id="menu1"}
+                                    <tr>
+                                        <td class="hidden-xs">
+                                            <label><input name="checkbox" class="check" type="checkbox" value="{$menu1.id}"></label>
+                                        </td>
+                                        <td>{$menu1.id}</td>
+                                        <td>{$menu1.pid}</td>
+                                        <td>|─{$menu1.name}</td>
+                                        <td>
+                                            {eq name="menu1.type|default=''" value="view"}链接{/eq} 
+                                            {eq name="menu1.type|default=''" value="click"}模拟关键字{/eq} 
+                                        </td>
+                                        <td>
+                                            {eq name="menu1.type|default=''" value="view"}
+                                                {$menu1.url}
+                                            {/eq}  
+                                        </td>
+                                        <td>
+                                            {eq name="menu1.type|default=''" value="click"}
+                                                {$menu1.key}
+                                            {/eq}  
+                                        </td>
+                                        <td>{$menu1.rank}</td>
+                                        <td>{$menu1.remark}</td>
+                                        <td class="table-action">
+                                            <a href="{:url('/admin/wx/menu/add',array('id'=>$menu1['id']))}">修改</a>
+                                            <a href="{:url('/admin/wx/menu/del',array('id'=>$menu1['id']))}">删除</a>
+                                        </td>
+                                    </tr>
+                                {/volist}
+                            {/volist}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="box-footer no-padding">
+                    <div class="mailbox-controls">
+                        <div class="btn-group">
+                            <a class="btn btn-danger" href="{:url('/admin/wechat/createWxMenu')}">生成自定义菜单</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.col -->
+    </div>
+</section>

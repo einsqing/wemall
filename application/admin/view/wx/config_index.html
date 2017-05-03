@@ -1,0 +1,105 @@
+
+<!-- Main content -->
+<section class="content">
+    <div class="row">
+        <div class="col-md-12">
+            <!-- general form elements -->
+            <div class="box box-default">
+                <div class="box-header with-border">
+                    <h3 class="box-title">微信设置</h3>
+                </div>
+                <!-- form start -->
+                <form class="form-horizontal" method="post" action="{:url('/admin/wx/config/index')}">
+                    <div class="box-body">
+                        <input class="form-control" name="id" placeholder="" value="{$config.id|default=1}"
+                               type="hidden">
+                        <div class="form-group">
+                            <label class="control-label col-md-2">url</label>
+
+                            <div class="col-sm-10">
+                                <input class="form-control" name="url" placeholder="" disabled value="{$url|default=''}"
+                                       type="text">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">token</label>
+
+                            <div class="col-sm-10">
+                                <input class="form-control" name="token" placeholder="" value="{$config.token|default=''}"
+                                       type="text">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-md-2">appid</label>
+
+                            <div class="col-sm-10">
+                                <input class="form-control" name="appid" placeholder="" value="{$config.appid|default=''}"
+                                       type="text">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">appsecret</label>
+
+                            <div class="col-sm-10">
+                                <input class="form-control" name="appsecret" placeholder="" value="{$config.appsecret|default=''}"
+                                       type="text">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">encodingaeskey</label>
+
+                            <div class="col-sm-10">
+                                <input class="form-control" name="encodingaeskey" placeholder=""
+                                       value="{$config.encodingaeskey|default=''}"
+                                       type="text">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">公众号原始ID</label>
+
+                            <div class="col-sm-10">
+                                <input class="form-control" name="old_id" placeholder=""
+                                       value="{$config.old_id|default=''}"
+                                       type="text">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-md-2">appid(小程序)</label>
+
+                            <div class="col-sm-10">
+                                <input class="form-control" name="x_appid" placeholder="" value="{$config.x_appid|default=''}"
+                                       type="text">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">appsecret(小程序)</label>
+
+                            <div class="col-sm-10">
+                                <input class="form-control" name="x_appsecret" placeholder="" value="{$config.x_appsecret|default=''}"
+                                       type="text">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.box-body -->
+
+                    <div class="box-footer">
+                        <div class="col-sm-2">
+                            <button type="submit" class="btn btn-block btn-danger">保存</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <!-- /.box -->
+
+        </div>
+        <!--/.col (right) -->
+    </div>
+</section>
+

@@ -1,0 +1,77 @@
+<!-- Main content -->
+<section class="content">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="callout callout-danger">
+                <p>支持的变量：</p>
+                <p>验证码：${code}</p>
+                <p>模版内容举例：您的本次验证码${code}，10分钟内输入有效，感谢使用平台</p>
+            </div>
+            <!-- general form elements -->
+            <div class="box">
+                <div class="box-header with-border">
+                    <h3 class="box-title">短信模版</h3>
+                </div>
+                <!-- form start -->
+                <form class="form-horizontal" action="{:url('/admin/tpl/sms/add')}" method="post" enctype="text/plain">
+                    <div class="box-body">
+                        <input class="form-control" name="id" placeholder="" value="{$sms.id|default=0}"
+                               type="hidden">
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">模版类型</label>
+
+                            <div class="col-sm-10">
+                                <input class="form-control" name="name" disabled placeholder="" value="{$sms.name|default=''}"
+                                       type="text">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">模版ID</label>
+
+                            <div class="col-sm-10">
+                                <input class="form-control" name="template_code" placeholder="" value="{$sms.template_code|default=''}"
+                                       type="text">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">模版内容</label>
+
+                            <div class="col-sm-10">
+                               <!-- <textarea class="form-control" name="description" placeholder="" rows="3">{$sms.content|default=''}</textarea> -->
+                               <textarea class="form-control" name="content" maxlength="5000" placeholder="变量格式：${code}; 示例：您的本次验证码${code}，10分钟内输入有效，感谢使用平台">{$sms.content|default=''}</textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">测试手机号</label>
+
+                            <div class="col-sm-10">
+                                <input class="form-control" name="phone" placeholder="" value="{$sms.phone|default=''}"
+                                       type="text">
+                            </div>
+                        </div>
+      
+                    </div>
+
+                    <div class="box-footer">
+                        <div class="col-sm-2">
+                            <button type="submit" class="btn btn-block btn-danger">保存</button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+            <!-- /.box -->
+        </div>
+        <!--/.col (right) -->
+    </div>
+</section>
+
+<script type="text/javascript">
+    $(function () {
+      
+    });
+</script>

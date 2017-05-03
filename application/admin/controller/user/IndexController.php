@@ -15,10 +15,10 @@ class IndexController extends BaseController
             $map['username']  = ['like','%'.input('param.name').'%'];
         }
         if(input('param.day') != ''){
-            $map['created_at']  = ['like',input('param.day').'%'];
+            $userlist    = User::whereTime('created_at', input('param.day'))->paginate();
+        }else{
+        	$userlist    = User::where($map)->order('id desc')->paginate();
         }
-		
-		$userlist = User::where($map)->order('id desc')->paginate();
 
 		cookie("prevUrl", $this->request->url());
 

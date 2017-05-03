@@ -1,0 +1,71 @@
+<!-- Main content -->
+<section class="content">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="callout callout-danger">
+                <p>支持的变量：</p>
+                <p>验证码：$code</p>
+                <p>模版内容举例：您好，欢迎您注册wemallshop微信商城，您的验证码是：$code</p>
+            </div>
+            <!-- general form elements -->
+            <div class="box">
+                <div class="box-header with-border">
+                    <h3 class="box-title">邮件模版</h3>
+                </div>
+                <!-- form start -->
+                <form class="form-horizontal" action="{:url('/admin/tpl/mail/add')}" method="post" enctype="text/plain">
+                    <div class="box-body">
+                        <input class="form-control" name="id" placeholder="" value="{$mail.id|default=0}"
+                               type="hidden">
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">邮件类型</label>
+
+                            <div class="col-sm-10">
+                                <input class="form-control" name="name" disabled placeholder="" value="{$mail.name|default=''}"
+                                       type="text">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">内容</label>
+
+                            <div class="col-sm-10">
+                                <!-- 加载编辑器的容器 -->
+                                <script id="UEditor" name="content" type="text/plain" style="height:500px;">
+                                    {$mail.content|default=''}
+                                </script>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">测试邮箱</label>
+
+                            <div class="col-sm-10">
+                                <input class="form-control" name="mail" placeholder="" value="{$mail.mail|default=''}"
+                                       type="text">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="box-footer">
+                        <div class="col-sm-2">
+                            <button type="submit" class="btn btn-block btn-danger">保存</button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+            <!-- /.box -->
+        </div>
+        <!--/.col (right) -->
+    </div>
+</section>
+
+<script type="text/javascript">
+    $(function () {
+        //实例化编辑器异步载入
+        var editor = new UE.ui.Editor();
+        editor.render("UEditor");
+    });
+</script>
