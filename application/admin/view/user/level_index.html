@@ -1,0 +1,69 @@
+<!-- Main content -->
+<section class="content">
+    <div class="row">
+        <!-- /.col -->
+        <div class="col-md-12">
+            <div class="box">
+                <div class="box-header with-border">
+                    <h3 class="box-title">会员等级</h3>
+                    <!-- /.box-tools -->
+                </div>
+                <div style="margin-top: 10px;">
+                    <div class="btn-group" style="margin-left: 10px;">
+                        <a href="{:url('/admin/user/level/add')}" class="btn btn-danger ">
+                            新增等级
+                        </a>
+                    </div>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body table-responsive">
+                    <table class="table table-bordered table-hover">
+                        <tbody>
+                        <tr>
+                            <th>
+                                <label><input onchange="checkAll()" type="checkbox" value=""></label>
+                            </th>
+                            <th>编号</th>
+                            <th>名称</th>
+                            <th>积分(大于等于)</th>
+                            <th>时间</th>
+                            <th>操作</th>
+                        </tr>
+
+                        {volist name="levellist" id="level"}
+                            <tr>
+                                <td>
+                                    <label><input name="checkbox" class="check" type="checkbox" value="{$level.id}"></label>
+                                </td>
+                                <td>{$level.id}</td>
+                                <td>{$level.name}</td>
+                                <td>>=  {$level.score}</td>
+                                <td>{$level.created_at}</td>
+                                <td class="table-action">
+                                    <a href="{:url('/admin/user/level/add',array('id'=>$level['id']))}">编辑</a> 
+                                </td>
+                            </tr>
+                        {/volist}
+
+                        </tbody>
+                    </table>
+                </div>
+                <div class="box-footer no-padding">
+                    <div class="mailbox-controls">
+                        <div class="btn-group">
+
+                        </div>
+                        <div class="btn-group">
+                            
+                        </div>
+                        <div class="pull-right">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /. box -->
+        </div>
+        <!-- /.col -->
+    </div>
+</section>

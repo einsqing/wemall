@@ -1,0 +1,36 @@
+
+<!-- Main content -->
+<section class="content">
+    <div class="box box-default color-palette-box">
+        <div class="box-header with-border">
+
+            <h3 class="box-title">插件列表</h3>
+        </div>
+        <div class="box-body">
+            {volist name="item" id="item"}
+            <div class="row">
+                <div class="col-xs-12">
+                    <p class="lead">{$item.title}</p>
+                </div>
+                <div class="col-xs-12 table-responsive">
+                    {volist name="item.sub" id="addon"}
+                    <div class="col-md-3 col-sm-6 col-xs-12" style="min-width: 300px;">
+                        <a href="{$addon.addons_admin_url}" target="_blank">
+                            <div class="info-box" style="cursor:pointer;border: 1px solid #f7f7f7;box-shadow: none;height: 90px;">
+                                <span style="float: left;width: 90px;text-align: center;line-height: 90px;">
+                                    <img src="{$addon.addons_img_url}" style="height: 60px;">
+                                </span>
+                                <div class="info-box-content">
+                                    <span class="info-box-number">{$addon.title}</span>
+                                    <small>{$addon.description}</small>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    {/volist}
+                </div>
+            </div>
+            {/volist}
+        </div>
+    </div>
+</section>

@@ -1,0 +1,66 @@
+{include file="index/header" /}
+
+<body>
+    <div class="g-install">
+        <div class="m-head">
+            <h1>WeMall安装环境测试</h1>
+        </div>
+        <div class="m-body">
+            <div class="tt"></div>
+            <div class="m-form">
+                <legend>功能支持检测</legend>
+                {volist name="check_env" id="vo"}
+                    <div class="formitm">
+                        <label class="lab">{$vo.0}：</label>
+                        <div class="ipt">
+                            {$vo.3}&nbsp;&nbsp;&nbsp;&nbsp;
+                            <?php if ($vo[4] == 'error'){
+            echo "<font color=red><b>×</b></font>";
+                        } else {
+                        echo "<font color=green><b>√</b></font>";
+                        } ?>
+                        </div>
+                    </div>
+                {/volist}
+                <legend>函数支持检测</legend>
+                {volist name="check_func" id="vo"}
+                    <div class="formitm">
+                        <label class="lab">{$vo.0}：</label>
+                        <div class="ipt">
+                            {$vo.1}&nbsp;&nbsp;&nbsp;&nbsp;
+                            <?php if ($vo[2] == 'error'){
+            echo "<font color=red><b>×</b></font>";
+                        } else {
+                        echo "<font color=green><b>√</b></font>";
+                        } ?>
+                        </div>
+                    </div>
+                {/volist}
+                <div class="formitm"> 以上模块功能如果不可用可能会影响到系统的部分功能将无法使用</div>
+                <legend>目录权限检测</legend>
+                {volist name="check_dirfile" id="vo"}
+                    <div class="formitm">
+                        <label class="lab">{$vo.1}：</label>
+                        <div class="ipt">
+                            {$vo.3}&nbsp;&nbsp;&nbsp;&nbsp;
+                            <?php if ($vo[2] == 'error'){
+            echo "<font color=red><b>×</b></font>";
+                        } else {
+                        echo "<font color=green><b>√</b></font>";
+                        } ?>
+                        </div>
+                    </div>
+                {/volist}
+            </div>
+        </div>
+        <div class="m-foot"><a href="{:url('index')}">上一步</a>
+            <?php if (!function_exists('mysql_connect')||!function_exists('mysql_pconnect')){ ?>
+            <a href="javascript:;" onclick="alert('关键功能无法使用，无法继续操作！')">下一步</a>
+            <?php }else { ?>
+            <a href="{:url('setup2')}" class="submit">下一步</a>
+            <?php } ?>
+        </div>
+    </div>
+</body>
+
+</html>

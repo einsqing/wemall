@@ -1,0 +1,74 @@
+
+<section class="content">
+    <div class="row">
+        <!-- /.col -->
+        <div class="col-md-12">
+            <div class="box box-default">
+                <div class="box-header with-border">
+                    <h3 class="box-title">活动列表</h3>
+                </div>
+                <div style="margin-top: 10px;">
+                    <div class="btn-group" style="margin-left: 10px;">
+                        <a href="{:addon_url('putong://demo/admin/add')}" class="btn btn-danger ">
+                            新增活动
+                        </a>
+                    </div>
+                </div>
+                <div class="box-body table-responsive">
+                    <table class="table table-bordered table-hover">
+                        <tbody>
+                        <tr>
+                            <th>活动编号</th>
+                            <th>活动名称</th>
+                            <th>活动图片</th>
+                            <th>活动时间</th>
+                            <th>活动状态</th>
+                            <th>操作</th>
+                        </tr>
+                        {volist name="configList" id="config" empty="暂时没有数据"}
+                            <tr>
+                                <td>{$config.id}</td>
+                                <td>{$config.name}</td>
+                                <td>
+                                	{empty name="config.file_id"}
+                                        <img style="width: 60px;" src="__PUBLIC__/static/dist/img/noimage.gif">
+                                    {else /}
+                                        <img style="width: 60px;"
+                                        src="__PUBLIC__/uploads/{$config['file']['savepath']}{$config['file']['savename']}">
+                                    {/empty}
+                                </td>
+                                <td>{$config.timerange}</td>
+                                <td>
+                                    {eq name="config.status" value="1"}
+                                        <span class="label label-success">已开启</span>
+                                    {else/}
+                                        <span class="label label-default">已关闭</span>
+                                    {/eq}
+                                </td>
+                                <td>
+                                	<a href="{:addon_url('putong://demo/admin/add',array('id'=>$config['id']))}">编辑</a>
+                                	{eq name="config.status" value="0"}
+                                    <a href="{:addon_url('putong://demo/admin/update',array('id'=>$config['id'],'status'=>1))}">开启</a> 
+                                    {/eq}
+                                    {eq name="config.status" value="1"}
+                                    <a href="{:addon_url('putong://demo/admin/update',array('id'=>$config['id'],'status'=>0))}">关闭</a> 
+                                    {/eq}
+                                </td>
+                            </tr>
+                        {/volist}
+                        </tbody>
+                    </table>
+                </div>
+                <div class="box-footer no-padding">
+                    <div class="mailbox-controls">
+                        <div class="pull-right">
+                            {$configList->render()}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /. box -->
+        </div>
+        <!-- /.col -->
+    </div>
+</section>

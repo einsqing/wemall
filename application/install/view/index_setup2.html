@@ -1,0 +1,91 @@
+{include file="index/header" /}
+
+<body>
+<div class="g-install">
+    <div class="m-head">
+        <h1>WeMall安装配置</h1>
+    </div>
+    <form action="{:url('setup3')}" method="post">
+        <div class="m-body">
+            <div class="tt"></div>
+            <div class="m-form">
+
+                <div class="formitm">
+                    <label class="lab">数据库地址：</label>
+
+                    <div class="ipt">
+                        <input type="text" class="u-element" name="db[hostname]" value="127.0.0.1"/>
+                    </div>
+                </div>
+                <div class="formitm">
+                    <label class="lab">数据库端口：</label>
+
+                    <div class="ipt">
+                        <input type="text" class="u-element" name="db[hostport]" value="3306"/>
+                    </div>
+                </div>
+                <div class="formitm">
+                    <label class="lab">数据库名称：</label>
+
+                    <div class="ipt">
+                        <input type="text" class="u-element" name="db[database]" value="wemall"/>
+                    </div>
+                </div>
+                <div class="formitm">
+                    <label class="lab">数据库用户名：</label>
+
+                    <div class="ipt">
+                        <input type="text" class="u-element" name="db[username]" value="root"/>
+                    </div>
+                </div>
+                <div class="formitm">
+                    <label class="lab">数据库密码：</label>
+
+                    <div class="ipt">
+                        <input type="text" class="u-element" name="db[password]" value=""/>
+                    </div>
+                </div>
+                <div class="formitm">
+                    <label class="lab">数据库类型：</label>
+
+                    <div class="ipt">
+                        <input type="radio" checked="checked" name="type" value="1"/>&nbsp;带演示数据
+                        <input type="radio"  name="type" value="0"/>&nbsp;不带演示数据
+                    </div>
+                </div>
+
+                <div style="color: #ffffff;width: 100px;height: 30px;background-color:#dd4b39;position: relative;left: -20px;text-align: center;margin-top: 16px; ">
+                    超级管理员
+                </div>
+                <div class="formitm">
+                    <label class="lab">用户名/邮箱：</label>
+
+                    <div class="ipt">
+                        <input type="text" class="u-element" name="username" value=""/>
+                    </div>
+                </div>
+                <div class="formitm">
+                    <label class="lab">密码：</label>
+
+                    <div class="ipt">
+                        <input type="password" class="u-element" name="password" value=""/>
+                    </div>
+                </div>
+                <div class="formitm">
+                    <label class="lab">重复密码：</label>
+
+                    <div class="ipt">
+                        <input type="password" class="u-element" name="password2" value=""/>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="m-foot">
+            <a href="{:url('setup1')}">上一步</a>
+            <button type="submit" class="submit">安装</button>
+        </div>
+    </form>
+</div>
+</body>
+</html>

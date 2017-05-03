@@ -1,0 +1,88 @@
+
+<!-- Main content -->
+<section class="content">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="box box-default">
+                <div class="box-header with-border">
+                    <h3 class="box-title">管理员管理</h3>
+                </div>
+                <div style="margin-top: 10px;">
+                    <div class="btn-group" style="margin-left: 10px;">
+                        <a href="{:url('/admin/auth/admin/add')}" class="btn btn-danger ">
+                            新增管理员
+                        </a>
+                    </div>
+                </div>
+                <div class="box-body table-responsive">
+                    <table class="table table-bordered table-hover">
+                        <tbody>
+                        <tr>
+                            <!-- <th class="hidden-xs">
+                                <label><input onchange="checkAll()" type="checkbox" value=""></label>
+                            </th> -->
+                            <th>编号</th>
+                            <th>用户名</th>
+                            <th>用户组</th>
+                            <th>手机号</th>
+                            <th>邮箱</th>
+                            <th>状态</th>
+                            <th>备注</th>
+                            <th>最后登录时间</th>
+                            <th>操作</th>
+                        </tr>
+                        {volist name="adminlist" id="user"}
+                            <tr>
+                                <!-- <td class="hidden-xs">
+                                    <label><input name="checkbox" class="check" type="checkbox" value="{$user.id}"></label>
+                                </td> -->
+                                <td>{$user.id}</td>
+                                <td>{$user.username}</td>
+                                <td>{$user.group.title}</td>
+                                <td>{$user.mobile}</td>
+                                <td>{$user.email}</td>
+                                <td>
+                                    {eq name="user.status" value="1"}
+                                        <span class="label label-success">启用</span>
+                                    {else/}
+                                        <span class="label label-default">禁用</span>
+                                    {/eq}
+                                </td>
+                                <td>{$user.remark}</td>
+                                <td>{$user.last_login_time}</td>
+                                <td class="table-action">
+                                    <a href="{:url('/admin/auth/admin/add',array('id'=>$user['id']))}">修改</a>
+                                    {gt name="user.id" value="1"}
+                                        {eq name="user.status" value="0"}
+                                            <a href="{:url('/admin/auth/admin/update',array('id'=>$user['id'],'status'=>1))}">开启</a>
+                                        {else}
+                                            <a href="{:url('/admin/auth/admin/update',array('id'=>$user['id'],'status'=>0))}">关闭</a>
+                                        {/eq}
+                                        <a href="{:url('/admin/auth/admin/del',array('id'=>$user['id']))}">删除</a>
+                                    {/gt}
+                                </td>
+                            </tr>
+                        {/volist}
+                        </tbody>
+                    </table>
+                    <!-- <div class="box-footer no-padding"> -->
+                        <!-- <div class="mailbox-controls"> -->
+                            <!-- <div class="btn-group"> -->
+                                <!-- <button type="button" class="btn btn-danger"
+                                        onclick="batchUrl('{:url(\'/admin/auth/admin/del\')}')">全部删除
+                                </button> -->
+                            <!-- </div> -->
+                            <!-- /.btn-group -->
+                            <!-- <div class="pull-right"> -->
+                                
+                            <!-- </div> -->
+                            <!-- /.pull-right -->
+                        <!-- </div> -->
+                    <!-- </div> -->
+                </div>
+            </div>
+            <!-- /. box -->
+        </div>
+        <!-- /.col -->
+    </div>
+</section>

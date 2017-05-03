@@ -1,0 +1,49 @@
+<!-- Main content -->
+<section class="content">
+    <div class="row">
+        <div class="col-md-12">
+            <!-- general form elements -->
+            <div class="box">
+                <div class="box-header with-border">
+                    <h3 class="box-title">新增等级</h3>
+                </div>
+                <!-- form start -->
+                <form class="form-horizontal" action="{:url('/admin/user/level/add')}" method="post">
+                    <div class="box-body">
+                        <input class="form-control" name="id" placeholder="" value="{$level.id|default=0}"
+                               type="hidden">
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">名称</label>
+
+                            <div class="col-sm-10">
+                                <input class="form-control" name="name" placeholder="" value="{$level.name|default=''}"
+                                       type="text">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">积分 >=</label>
+
+                            <div class="col-sm-10">
+                                <input class="form-control" name="score" placeholder="" value="{$level.score|default=''}"
+                                       type="number">
+                            </div>
+                        </div>
+
+                        <div class="box-footer">
+                            <div class="col-sm-2">
+                                <button type="submit" class="btn btn-block btn-danger">保存</button>
+                            </div>
+
+                            <div class="col-sm-2">
+                                <button type="button" class="btn btn-block btn-default" onclick="history.go(-1)">取消
+                                </button>
+                            </div>
+                        </div>
+                </form>
+            </div>
+            <!-- /.box -->
+        </div>
+        <!--/.col (right) -->
+    </div>
+</section>

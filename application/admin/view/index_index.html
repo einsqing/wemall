@@ -1,0 +1,21 @@
+<section class="content">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="box box-danger">
+                <div class="box-header with-border">
+                    <h3 class="box-title">系统信息</h3>
+                </div>
+                <div class="box-body">
+                    <blockquote style="font-size: 13.5px;padding-left: 10px;">
+                        THINKPHP版本：{$Think.THINK_VERSION}<br/>
+                        服务器IP：{$Think.server.SERVER_ADDR}<br/>
+                        服务器系统：<?php echo PHP_OS ?><br/>
+                        PHP版本：<?php echo PHP_VERSION ?><br/>
+                        当前时间：<?php echo (date("Y-m-d H:i:s",time())); ?><br/>
+                        官网网址：<a href="http://www.wemallshop.com" target="_black">http://www.wemallshop.com</a><br/>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

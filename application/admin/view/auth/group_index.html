@@ -1,0 +1,60 @@
+
+<section class="content">
+    <div class="row">
+        <!-- /.col -->
+        <div class="col-md-12">
+            <div class="box box-default">
+                <div class="box-header with-border">
+                    <h3 class="box-title">用户组管理</h3>
+                </div>
+                <div style="margin-top: 10px;">
+                    <div class="btn-group" style="margin-left: 10px;">
+                        <a href="{:url('/admin/auth/group/add')}" class="btn btn-danger ">
+                            新增用户组
+                        </a>
+                    </div>
+                </div>
+                <div class="box-body table-responsive">
+                    <table class="table table-bordered table-hover">
+                        <tbody>
+                        <tr>
+                            <th>编号</th>
+                            <th>用户组</th>
+                            <th>状态</th>
+                            <th>时间</th>
+                            <th>操作</th>
+                        </tr>
+                        {volist name="grouplist" id="group"}
+                            <tr>
+                                <td>{$group.id}</td>
+                                <td>{$group.title}</td>
+                                <td>
+                                    {eq name="group.status" value="1"}
+                                        <span class="label label-success">启用</span>
+                                    {else/}
+                                        <span class="label label-default">禁用</span>
+                                    {/eq}
+                                </td>
+                                <td>{$group.created_at}</td>
+                                <td class="table-action">
+                                    <a href="{:url('/admin/auth/group/add',array('id'=>$group['id']))}">修改</a>
+                                    {gt name="group.id" value="1"}
+                                        {eq name="group.status" value="0"}
+                                            <a href="{:url('/admin/auth/group/update',array('id'=>$group['id'],'status'=>1))}">开启</a>
+                                        {else}
+                                            <a href="{:url('/admin/auth/group/update',array('id'=>$group['id'],'status'=>0))}">关闭</a>
+                                        {/eq}
+                                        <a href="{:url('/admin/auth/group/del',array('id'=>$group['id']))}">删除</a>
+                                    {/gt}
+                                </td>
+                            </tr>
+                        {/volist}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- /. box -->
+        </div>
+        <!-- /.col -->
+    </div>
+</section>

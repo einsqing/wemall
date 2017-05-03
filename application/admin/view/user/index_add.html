@@ -1,0 +1,103 @@
+
+<!-- Main content -->
+<section class="content">
+    <div class="row">
+        <div class="col-md-12">
+            <!-- general form elements -->
+            <div class="box box-default">
+                <div class="box-header with-border">
+                    <h3 class="box-title">新增/修改用户</h3>
+                </div>
+                <!-- form start -->
+                <form class="form-horizontal layui-form" action="{:url('/admin/user/index/add')}" method="post">
+                    <div class="box-body">
+                        <input class="form-control" name="id" placeholder="" value="{$user.id|default=0}"
+                               type="hidden">
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">用户名</label>
+
+                            <div class="col-sm-10">
+                                <input class="form-control" name="username" placeholder="" value="{$user.username}"
+                                       type="text">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">手机号</label>
+
+                            <div class="col-sm-10">
+                                <input class="form-control" name="phone" placeholder="" value="{$user.phone}"
+                                       type="text">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">密码</label>
+
+                            <div class="col-sm-10">
+                                <input class="form-control" name="password" placeholder="请输入新密码" value=""
+                                       type="text">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">账户</label>
+
+                            <div class="col-sm-10">
+                                <input class="form-control" name="money" placeholder="" value="{$user.money}"
+                                       type="text">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">积分</label>
+
+                            <div class="col-sm-10">
+                                <input class="form-control" name="score" placeholder="" value="{$user.score}"
+                                       type="text">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">备注</label>
+
+                            <div class="col-sm-10">
+                                <input class="form-control" name="remark" placeholder="" value="{$user.remark}"
+                                       type="text">
+                            </div>
+                        </div>
+                        {neq name="user.id|default=0" value="1"}
+                        <div class="form-group">
+                            <label class="control-label col-md-2">状态</label>
+
+                            <div class="col-md-7">
+                                <input type="radio" name="status" value="1" lay-filter="type" title="启用"
+                                    {eq name="user.status|default='1'" value="1"}checked{/eq}>
+                                <input type="radio" name="status" value="0" lay-filter="type" title="禁用" 
+                                    {eq name="user.status|default=''" value="0"}checked{/eq}>
+                            </div>
+                        </div>
+                        {/neq}
+                        <!-- /.box-body -->
+
+                        <div class="box-footer">
+                            <div class="col-sm-2">
+                                <button type="submit" class="btn btn-block btn-danger">保存</button>
+                            </div>
+
+                            <div class="col-sm-2">
+                                <button type="button" class="btn btn-block btn-default" onclick="history.go(-1)">取消
+                                </button>
+                            </div>
+                        </div>
+                </form>
+            </div>
+            <!-- /.box -->
+        </div>
+        <!--/.col (right) -->
+    </div>
+</section>
+<script type="text/javascript">
+    $(function () {
+        layui.use('form', function() {
+            var form = layui.form();
+            form.render(); //更新全部
+        });
+    });
+</script>

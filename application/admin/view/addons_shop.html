@@ -1,0 +1,78 @@
+<iframe src="http://addon.wemallshop.com?url={$domain|urlencode}" allowtransparency="true" id="myiframe"
+        style="background-color:transparent;min-height: 800px;" frameborder="0" width="100%">
+</iframe>
+
+<script type="text/javascript">
+    
+    window.addEventListener('message', function (e) {
+        if (e.origin != 'http://addon.wemallshop.com') {
+            return
+        }
+        var data = JSON.parse(e.data);
+        install(data.path, data.uuid, data.type, data.sort);
+    }, false);
+    
+    function install(path, uuid, type, sort) {
+        console.log('开始下载');
+
+        $.ajax({
+            type: "post",
+            url: "{:url('admin/addons/getFileDownload')}",
+            data: {
+                path: path,
+                uuid: uuid,
+                type: type,
+                sort: sort
+            },
+            beforeSend: function(XMLHttpRequest){
+                layui.use('layer', function(){
+                    var layer = layui.layer;
+                    layer.msg('正在努力下载...',{icon: 16,time: 20000, shade: [0.5, '#000']});
+                }); 
+            },
+            success: function (res) {
+                console.log('下载完成');
+                layui.use('layer', function(){
+                    var layer = layui.layer;
+                    layer.closeAll();
+                    layer.msg(res.msg,{icon: 6,time: 2000, shade: [0.5, '#000']}); 
+                });
+                compare();
+            }
+        });
+    }
+    
+    function compare() {
+        $.ajax({
+            type: "post",
+            url: "{:url('admin/addons/compare')}",
+            data: {
+                // path: path,
+                // filename: filename,
+                // filesize: filesize,
+            },
+            beforeSend: function(XMLHttpRequest){
+                layui.use('layer', function(){
+                    var layer = layui.layer;
+                    layer.msg('正在安装...',{icon: 16,time: 20000, shade: [0.5, '#000']});
+                }); 
+            },
+            success: function (res) {
+                if (res.code) {
+                    console.log('安装完成');
+                    layui.use('layer', function(){
+                        var layer = layui.layer;
+                        layer.msg(res.msg,{icon: 6,time: 2000, shade: [0.5, '#000']});
+                    });
+                    location.href="{:url('admin/addons/index')}";
+                }else{
+                    layui.use('layer', function(){
+                        var layer = layui.layer;
+                        layer.alert(res.msg, {icon: 5,title: '安装失败'});
+                    });
+                }
+            }
+        });
+    }
+    
+</script>

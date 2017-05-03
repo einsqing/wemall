@@ -1,0 +1,126 @@
+
+<!-- Main content -->
+<section class="content">
+    <div class="row">
+        <div class="col-md-12">
+            <!-- general form elements -->
+            <div class="box box-default">
+                <div class="box-header with-border">
+                    <h3 class="box-title">新增/修改活动</h3>
+                </div>
+                <!-- form start -->
+                <form class="form-horizontal layui-form" action="{:addon_url('putong://demo/admin/add')}" method="post">
+                    <div class="box-body">
+                        <input class="form-control" name="id" placeholder="" value="{$config.id|default=0}"
+                               type="hidden">
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">活动名称</label>
+
+                            <div class="col-sm-10">
+                                <input class="form-control" name="name" placeholder="" value="{$config.name|default=''}"
+                                       type="text">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">活动描述</label>
+
+                            <div class="col-sm-10">
+                                <textarea class="form-control" name="sub" rows="3">{$config.sub|default=''}</textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">活动图片</label>
+
+                            <div class="col-sm-10">
+                                <div class="fileupload fileupload-new" data-provides="fileupload">
+                                    <div class="fileupload-new img-thumbnail">
+                                        {empty name="config.file_id"}
+                                            <img src="__PUBLIC__/static/dist/img/noimage.gif">
+                                        {else /}
+                                            <img src="__PUBLIC__/uploads/{$config['file']['savepath']}{$config['file']['savename']}">
+                                        {/empty}
+                                        <input class="form-control" name="file_id" id="file_id" placeholder=""
+                                               value="{$config.file_id|default=''}" type="hidden">
+
+                                        <div class="edit_pic_mask">
+                                            <i class="fa fa-plus-circle" onclick="imageUploader(this,false)"></i>
+                                            <i class="fa fa-minus-circle" onclick="removeImage(this,false)"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-md-2">活动时间</label>
+                            <div class="col-md-7">
+                                <input class="form-control pull-right" name="timerange"
+                                           id="reservationtime" value="{$config.timerange|default=''}" type="text" >
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">活动详情</label>
+
+                            <div class="col-md-10">
+                                <!-- 加载编辑器的容器 -->
+                                <script id="UEditor" name="detail" type="text/plain" style="height:500px;">
+                                    {$config.detail|default=''}
+                                </script>
+                            </div>
+                        </div>
+
+          
+                        <div class="form-group">
+                            <label class="control-label col-md-2">活动状态</label>
+
+                            <div class="col-md-7">
+                                <input type="checkbox" name="status" lay-skin="switch" value="1"
+                                {notempty name="config.status"}checked{/notempty}>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- /.box-body -->
+
+                    <div class="box-footer">
+                        <div class="col-sm-2">
+                            <button class="btn btn-block btn-danger" lay-submit lay-filter="save">保存</button>
+                        </div>
+
+                        <div class="col-sm-2">
+                            <button type="button" class="btn btn-block btn-default" onclick="history.go(-1)">取消
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <!-- /.box -->
+        </div>
+        <!--/.col (right) -->
+    </div>
+</section>
+<script type="text/javascript">
+	if('{$ads.position_id|default=''}'){
+        $('select[name="position_id"]').val('{$ads.position_id|default=''}');
+    }
+    $(function () {
+    	//实例化编辑器异步载入
+        var editor = new UE.ui.Editor();
+        editor.render("UEditor");
+
+        //时间段插件
+        $('#reservationtime').daterangepicker({
+            timePicker: true,
+            timePickerIncrement: 30,
+            format: 'YYYY-MM-DD h:mm:ss',
+            separator: ' --- ',
+        });
+
+        layui.use('form', function() {
+            var form = layui.form();
+            form.render(); //更新全部
+        });
+    });
+</script>

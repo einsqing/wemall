@@ -1,0 +1,87 @@
+
+<!-- Main content -->
+<section class="content">
+    <div class="row">
+        <div class="col-md-12">
+            <!-- general form elements -->
+            <div class="box box-default">
+                <div class="box-header with-border">
+                    <h3 class="box-title">新增用户组</h3>
+                </div>
+                <!-- form start -->
+                <form class="form-horizontal" action="{:url('/admin/auth/group/add')}" method="post">
+                    <div class="box-body">
+                        <input class="form-control" name="id" placeholder="" value="{$group.id|default=0}"
+                               type="hidden">
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">名称</label>
+
+                            <div class="col-sm-10">
+                                <input class="form-control" name="title" required="required" placeholder="" value="{$group.title|default=''}"
+                                       type="text">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">权限</label>
+
+                            <div class="col-sm-10">
+                                <div class="table-responsive" style="overflow-x: visible;">
+                                    <table class="table table-bordered table-hover">
+                                        <tbody>
+                                        <tr>
+                                            <th style="width: 30px">
+                                                <input onchange="checkAll()" type="checkbox" value="">
+                                            </th>
+                                            <th>编号</th>
+                                            <th>权限标题</th>
+                                            <th>权限</th>
+                                        </tr>
+                                        {volist name="rule" id="auth"}
+                                            <tr>
+                                                <td>
+                                                    <label>
+                                                    <input type="checkbox" name="rules[]" class="check" value="{$auth.id|default=''}"
+                                                        {in name="auth.id" value="$group.rules|default=''"}checked="true"{/in}/>
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    {$auth.id}
+                                                </td>
+                                                <td>
+                                                    {$auth.title}
+                                                </td>
+                                                <td>
+                                                    {$auth.name}
+                                                </td>
+                                            </tr>
+                                        {/volist}
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.box-body -->
+
+                        <div class="box-footer">
+                            <div class="col-sm-2">
+                                <button type="submit" class="btn btn-block btn-danger">保存</button>
+                            </div>
+
+                            <div class="col-sm-2">
+                                <button type="button" class="btn btn-block btn-default" onclick="history.go(-1)">取消
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <!-- /.box -->
+        </div>
+        <!--/.col (right) -->
+    </div>
+</section>
+<script type="text/javascript">
+    $(function () {
+       
+    });
+</script>
