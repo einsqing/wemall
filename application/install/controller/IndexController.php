@@ -69,9 +69,6 @@ class IndexController extends Controller
         if (!$data['db']['username']) {
             install_show_msg('请填写数据库用户名！', false);
         }
-        if (!$data['type']) {
-            install_show_msg('请填写数据类型！', false);
-        }
         if (!$data['username']) {
             install_show_msg('请填写用户名/邮箱！', false);
         }
@@ -108,11 +105,7 @@ class IndexController extends Controller
         //修改数据库配置文件
         write_config($data['db']);
         //安装数据库
-        if($data['type']){
-            $file = './wemall7.sql';
-        }else{
-            $file = './wemall7_empty.sql';
-        }
+        $file = './wemall7.sql';
         $sqlData = get_mysql_data($file, '', '');
         foreach ($sqlData as $sql) {
             $rst = mysql_query($sql);
@@ -121,6 +114,8 @@ class IndexController extends Controller
                 install_show_msg(mysql_error(), false);
             }
         }
+        //连接数据库
+        Db::connect($data['db']);
         //创建超级管理员
         Db::name('admin')->where('id',1)->update(['username' => $data['username'],'password'=>md5($data['password'])]);
         install_show_msg('超级管理员创建完成...');
