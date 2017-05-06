@@ -1,0 +1,36 @@
+{
+    "name":             "qingyuexi/think-addons",
+    "description":      "addons package for thinkphp5",
+    "keywords":         ["addons", "think-addons", "tp5-addons","qingyuexi-addons","thinkphp5"],
+    "homepage": 		"https://github.com/qingyuexi/think-addons",
+    "license": 			"Apache-2.0",
+    "minimum-stability": "stable",
+    "version": "1.0.3",
+    "authors": [{
+        "name":         "qingyuexi",
+        "email":        "1604583867@qq.com",
+        "homepage":     "http://www.youtellme.cc",
+        "role":         "Engineer"
+    }],
+    "support": {
+        "issues": "https://github.com/qingyuexi/think-addons/issues"
+    },
+    "require": {
+        "php": ">=5.4.0",
+        "topthink/think-helper": ">=1.0.4",
+        "topthink/think-installer": ">=1.0.10"
+    },
+    "autoload": {
+        "psr-4": {
+            "think\\": "src/"
+        },
+        "files": [
+            "src/common.php"
+        ]
+    },
+    "extra": {
+        "think-config": {
+            "addons": "src/config.php"
+        }
+    }
+}
