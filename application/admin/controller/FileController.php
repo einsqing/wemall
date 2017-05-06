@@ -22,7 +22,7 @@ class FileController extends BaseController
         $data = array();
         foreach($files as $file){
         	// 移动到框架应用根目录/public/uploads/ 目录下
-	        $info = $file->move(ROOT_PATH . 'public' . DS . 'uploads');
+	        $info = $file->validate(['ext'=>'jpg,png,gif,jpeg'])->move(ROOT_PATH . 'public' . DS . 'uploads');
 	        if ($info) {
 	            $item = array();
 	            $item['name'] = $info->getInfo('name');
