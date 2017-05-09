@@ -81,43 +81,43 @@ class IndexController extends Controller
         if ($data['password'] != $data['password2']) {
             install_show_msg('重复密码不匹配！', false);
         }
-        //检查数据库
-        $link = @mysql_connect($data['db']['hostname'] . ':' . $data['db']['hostport'], $data['db']['username'], $data['db']['password']);
-        if (!$link) {
+
+        // 缓存数据库配置
+        session('db_config', $data['db']);
+
+        // 防止不存在的数据库导致连接数据库失败
+        $db_name = $data['db']['database'];
+        unset($data['db']['database']);
+
+        // 创建数据库连接
+        $db_instance = Db::connect($data['db']);
+        // 检测数据库连接
+        try{
+            $db_instance->execute('select version()');
+        }catch(\Exception $e){
             install_show_msg('数据库连接失败，请检查连接信息是否正确！', false);
         }
-        $mysqlInfo = mysql_get_server_info($link);
-        if ($mysqlInfo < '5.1.0') {
-            install_show_msg('mysql版本低于5.1，无法继续安装！', false);
+
+        $result = $db_instance->execute('SELECT * FROM information_schema.schemata WHERE schema_name="'.$db_name.'"');
+        if ($result) {
+            install_show_msg('该数据库已存在，请更换名称！', false);
         }
 
-        $status = @mysql_select_db($data['db']['database'], $link);
-        if (!$status) {
-            //尝试创建数据库
-            $sql = "CREATE DATABASE IF NOT EXISTS `" . $data['db']['database'] . "` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;";
-            if (!mysql_query($sql)) {
-                install_show_msg('数据库' . $data['db']['database'] . '自动创建失败，请手动建立数据库！', false);
-            }
-            mysql_select_db($data['db']['database'], $link);
-        }
-        install_show_msg('数据库检查创建完成...');
-
+        // 创建数据库
+        $sql2 = "CREATE DATABASE IF NOT EXISTS `{$db_name}` DEFAULT CHARACTER SET utf8";
+        $db_instance->execute($sql2) || install_show_msg($db_instance->getError(), false);
         //修改数据库配置文件
-        write_config($data['db']);
-        //安装数据库
+        write_config(session('db_config'));
+        $db_instance2 = Db::connect(session('db_config'));
+        // 开始安装
         $file = './wemall7.sql';
         $sqlData = get_mysql_data($file, '', '');
         foreach ($sqlData as $sql) {
-            $rst = mysql_query($sql);
-
-            if ($rst === false) {
-                install_show_msg(mysql_error(), false);
-            }
+            $db_instance2->execute($sql);
         }
-        //连接数据库
-        Db::connect($data['db']);
+        
         //创建超级管理员
-        Db::name('admin')->where('id',1)->update(['username' => $data['username'],'password'=>md5($data['password'])]);
+        $db_instance2->name('admin')->where('id',1)->update(['username' => $data['username'],'password'=>md5($data['password'])]);
         install_show_msg('超级管理员创建完成...');
 
         //创建文件锁
