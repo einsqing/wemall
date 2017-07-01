@@ -9,7 +9,6 @@
 
 // 定义应用目录
 define('APP_PATH', __DIR__ . '/application/');
-define('ADDON_PATH', __DIR__ . '/addons/');
 define('DATA_PATH', __DIR__ . '/data/');
 define('PUBLIC_PATH', '/public');
 
